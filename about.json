@@ -15,7 +15,7 @@
   "color_schemes": {
     "Hell": {
       "primary": "222222",
-      "secondary": "ffffff",
+      "secondary": "#FBFAF8",
       "tertiary": "0088cc",
       "quaternary": "e45735",
       "header_background": "ffffff",
