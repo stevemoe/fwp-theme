@@ -9,7 +9,8 @@
   "maximum_discourse_version": null,
   "assets": {
     "forum_bg": "assets/forum_bg.svg",
-    "pflanze-licht": "assets/pflanze-licht.jpg"
+    "pflanze-licht": "assets/pflanze-licht.jpg",
+    "explorer": "assets/Explorer-Regular.otf"
   },
   "color_schemes": {
     "Hell": {
