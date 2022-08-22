@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Duper";
   src: url("https://cdn.primoza.de/files/Duper-Regular.woff2") format("woff2");
@@ -285,7 +289,7 @@ $max-width: 1200px;
     margin: 0;
     padding: 0;
     .searching {
-      // spinner
+
       top: 0.5em;
       right: 2.25em;
     }
@@ -296,11 +300,7 @@ $max-width: 1200px;
   }
 
   h1 {
-    //font-size: var(--font-up-6);
-    //line-height: $line-height-medium;
-    //@include breakpoint(tablet) {
-    //  font-size: var(--font-up-4);
-    //}
+
   }
 
   h1,
