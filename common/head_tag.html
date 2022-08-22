@@ -1,0 +1,269 @@
+<script type="text/x-handlebars" data-template-name="/components/categories-only">
+  {{#if this.categories}}
+  {{#if this.filteredCategories}}
+    <table class="category-list {{if this.showTopics "with-topics"}}">
+     <!-- <thead>
+        <tr>
+          <th class="category"><span role="heading" aria-level="2" id="categories-only-category">{{i18n "categories.category"}}</span></th>
+          <th class="topics">{{i18n "categories.topics"}}</th>
+          {{#if this.showTopics}}
+            <th class="latest">{{i18n "categories.latest"}}</th>
+          {{/if}}
+        </tr>
+      </thead> -->
+      <tbody aria-labelledby="categories-only-category">
+        {{#each this.categories as |category|}}
+          <ParentCategoryRow @category={{category}} @showTopics={{this.showTopics}} />
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+
+  {{#if this.mutedCategories}}
+    <div class="muted-categories">
+      <a href class="muted-categories-link" {{action "toggleShowMuted"}}>
+        <h3 class="muted-categories-heading">{{i18n "categories.muted"}}</h3>
+        {{#if this.mutedToggleIcon}}
+          {{d-icon this.mutedToggleIcon}}
+        {{/if}}
+      </a>
+      <table class="category-list {{if this.showTopics "with-topics"}} {{unless this.showMutedCategories "hidden"}}">
+       <thead>
+          <tr>
+            <th class="category"><span role="heading" aria-level="2" id="categories-only-category-muted">{{i18n "categories.category"}}</span></th>
+            <th class="topics">{{i18n "categories.topics"}}</th>
+            {{#if this.showTopics}}
+              <th class="latest">{{i18n "categories.latest"}}</th>
+            {{/if}}
+          </tr>
+        </thead>
+        <tbody aria-labelledby="categories-only-category-muted">
+          {{#each this.categories as |category|}}
+            <ParentCategoryRow @category={{category}} @showTopics={{this.showTopics}} @listType="muted" />
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{/if}}
+{{/if}}
+
+<PluginOutlet @name="below-categories-only" @connectorTagName="div" @args={{hash categories=this.categories showTopics=this.showTopics}} />
+
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="/components/parent-category-row">
+
+{{#unless this.isHidden}}
+  <PluginOutlet @name="category-list-above-each-category" @args={{hash category=this.category}} />
+<div class="w-screen py-48 bhg-[#{{this.category.color}}]">
+  <tr data-category-id={{this.category.id}} data-notification-level={{this.category.notificationLevelString}} class="{{if this.category.description_excerpt "has-description" "no-description"}} {{if this.category.uploaded_logo.url "has-logo" "no-logo"}}">
+    <td class="category {{if this.isMuted "muted"}} {{if this.noCategoryStyle "no-category-style"}}" style={{unless this.noCategoryStyle (html-safe (concat (border-color this.category.color) (category-color-variable this.category.color)))}}>
+      <CategoryTitleLink @category={{this.category}} />
+      <PluginOutlet @name="below-category-title-link" @connectorTagName="div" @args={{hash category=this.category}} />
+
+      {{#if this.category.description_excerpt}}
+        <div class="category-description">
+          {{dir-span this.category.description_excerpt htmlSafe="true"}}
+        </div>
+      {{/if}}
+
+      {{#if this.category.isGrandParent}}
+        <table class="category-list subcategories-with-subcategories">
+          <tbody>
+            {{#each this.category.subcategories as |subcategory|}}
+              <SubCategoryRow @category={{subcategory}} @listType={{this.listType}} />
+            {{/each}}
+          </tbody>
+        </table>
+      {{else if this.category.subcategories}}
+        <div class="subcategories">
+          {{#each this.category.subcategories as |subcategory|}}
+            <SubCategoryItem @category={{subcategory}} @listType={{this.listType}} />
+          {{/each}}
+        </div>
+      {{/if}}
+    </td>
+
+    <td class="topics">
+      <div title={{this.category.statTitle}}>{{html-safe this.category.stat}}</div>
+      <CategoryUnread @category={{this.category}} @tagName="div" @class="unread-new" />
+    </td>
+
+    {{#unless this.isMuted}}
+      {{#if this.showTopics}}
+        <td class="latest">
+          {{#each this.category.featuredTopics as |t|}}
+            <FeaturedTopic @topic={{t}} />
+          {{/each}}
+        </td>
+      {{/if}}
+    {{/unless}}
+  </tr>
+</div>  
+{{/unless}}
+
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+  const ajax = require('discourse/lib/ajax').ajax;
+  const Topic = require('discourse/models/topic').default;
+  // We're using ajax and the Topic model from Discourse
+
+  api.registerConnectorClass('above-main-container', 'featured-topics', {
+    // above-main-container is the plugin outlet,
+    // featured-topics is your custom component name
+
+    setupComponent(args, component) {
+
+      api.onPageChange((url, title) => {
+        if ((url == "/") || (url == "/categories") ){
+        
+          $('html').addClass('custom-featured-topics');
+          // add a class to the HTML tag for easy CSS targetting
+
+          component.set('displayfeaturedTopics', true);
+          // we'll use this later to show our template
+
+          component.set("loadingTopics", true);
+          // helps us show a loading spinner until topics are ready
+
+          ajax("/latest.json").then (function(result){
+          // Get posts from tag "featured" using AJAX
+          // if this were a category you'd use /c/featured.json
+
+            let featuredTopics = [];
+            // Create an empty array, we'll push topics into it
+
+            var featuredUsers = result.users;
+            // Get the relevant users
+
+            result.topic_list.topics.slice(0,4).forEach(function(topic){
+            // We're extracting the topics starting at 0 and ending at 4
+            // This means we'll show 3 total. Increase 4 to see more.
+
+              topic.posters.forEach(function(poster){
+                poster.user = $.grep(featuredUsers, function(e){ return e.id == poster.user_id; })[0];
+              });
+              // Associate users with our topic
+
+              featuredTopics.push(Topic.create(topic));
+              // Push our topics into the featuredTopics array
+            });
+
+            component.set("loadingTopics", false);
+            // Topics are loaded, stop showing the loading spinner
+
+            component.set('featuredTopics', featuredTopics);
+            // Setup our component with the topics from the array
+          });
+
+        } else {
+        // If the page doesn't match the urls above, do this:
+
+          $('html').removeClass('custom-featured-topics');
+          // Remove our custom class
+
+          component.set('displayfeaturedTopics', false);
+          // Don't display our customization
+        }
+      });
+    }
+  });
+</script>
+
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/above-main-container/featured-topics">
+
+  {{#if displayfeaturedTopics}}
+  
+  <!-- <h1 class="text-center my-48"> Willkommen im Forum von Friends With Plants</h1> -->
+    
+
+        <div class="relative grid grid-cols-1  gap-8 mb-20" >
+        <!--
+            <a href="c/gallery/5" class="rounded-3xl group overflow-hidden category__image">
+              <img src="https://a.storyblok.com/f/145886/1920x1080/f13b6798d8/pflanze-licht.jpg/m/1800x1800/" class="group-hover:scale-105 category__image rounded-3xl min-h-full"  alt="Eine kleine Pflanze">
+              <div class="absolute top-10 left-10">
+                <p class="text-2xl font-['primozaIsMessy'] text-white">Teile deine Pflanzerfolge</p>
+                
+              </div>
+            </a>
+        -->
+        
+            <div class="overflow-hidden bg-white/95">
+              <div class="m-8">
+                <div class="custom-featured-topics-wrapper border-2 border-[#001725]">
+                {{conditional-loading-spinner condition=loadingTopics}}
+                <!-- Show a loading spinner if topics are loading -->
+        
+                {{#unless loadingTopics}}
+                <!-- Unless topics are still loading... -->
+                  {{topic-list topics=featuredTopics showPosters=true}}
+                  <!-- Show the topic list -->
+                {{/unless}}
+                </div>
+              </div>
+            </div>
+        </div>
+            
+
+
+      
+
+  {{/if}}
+</script>
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+// The debounce function receives our function as a parameter
+const debounce = (fn) => {
+
+  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+  let frame;
+
+  // The debounce function returns a new function that can receive a variable number of arguments
+  return (...params) => {
+    
+    // If the frame variable has been defined, clear it now, and queue for next frame
+    if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+
+    // Queue our function call for the next frame
+    frame = requestAnimationFrame(() => {
+      
+      // Call our function and pass any params we received
+      fn(...params);
+    });
+
+  } 
+};
+
+
+// Reads out the scroll position and stores it in the data attribute
+// so we can use it in our stylesheets
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+
+const addHeaderFixed = () => {
+    if(window.scrollY > 0) {
+    document.body.classList.add("header-fixed");
+} else if (window.scrollY == 0 ) {
+    document.body.classList.remove("header-fixed");
+}
+}
+
+// Listen for new scroll events, here we debounce our `storeScroll` function
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+document.addEventListener('scroll', debounce(addHeaderFixed), { passive: true });
+
+
+// Update scroll position for first time
+storeScroll();
+</script>
