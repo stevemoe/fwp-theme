@@ -1,2 +1,6 @@
 node_modules
 .discourse-site
+/.idea/.gitignore
+/.idea/fwp-theme.iml
+/.idea/modules.xml
+/.idea/vcs.xml
