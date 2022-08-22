@@ -1,4 +1,9 @@
 /*
+Do NOT edit! Use main.scss instead!
+ */
+
+
+/*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
@@ -219,7 +224,7 @@ button,
 [type='submit'] {
   -webkit-appearance: button;
   /* 1 */
-  //background-color: transparent;
+  background-color: transparent;
   /* 2 */
   background-image: none;
   /* 2 */
@@ -400,10 +405,14 @@ object {
   /* 2 */
 }
 
-.d-header-icons {
-  .icon {
-    padding: 0;
-  }
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 *, ::before, ::after {
@@ -802,6 +811,12 @@ object {
   }
 }
 
+.d-header-icons {
+  .icon {
+    padding: 0;
+  }
+}
+
 .hover\:bg-\[\#F9D973\]:hover {
   background-color: #F9D973;
 }
@@ -832,16 +847,5 @@ object {
 @media (min-width: 1280px) {
   .xl\:text-\[5vw\] {
     font-size: 5vw;
-  }
-}
-
-
-//--------------------------------------------------
-//Header
-//--------------------------------------------------
-
-.d-header-icons {
-  .icon {
-    padding: 0;
   }
 }
