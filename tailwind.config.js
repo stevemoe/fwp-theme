@@ -6,6 +6,20 @@ module.exports = {
           'display' :['Explorer']
         },
         extend: {},
+        colors: {
+            'blue': '#8aa0bc',
+            'purple': '#9787ab',
+            'pink': '#ff49db',
+            'orange': '#f49c86',
+            'green': '#9fc9c2',
+            'turquoise': '#9fc9c2',
+            'yellow': '#f9d973',
+            'gray-dark': '#646464',
+            'gray': '#8492a6',
+            'gray-light': '#d3dce6',
+            'black': '#001725',
+            'white': '#fbfaf8',
+        },
     },
     plugins: [],
 

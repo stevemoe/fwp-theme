@@ -1,9 +1,4 @@
 /*
-Do NOT edit! Use main.scss instead!
- */
-
-
-/*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
@@ -21,7 +16,7 @@ Do NOT edit! Use main.scss instead!
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -759,10 +754,6 @@ video {
   letter-spacing: 0.05em;
 }
 
-.text-white {
-  color: #fff;
-}
-
 .text-\[\#FBFAF8\] {
   color: #FBFAF8;
 }
@@ -810,6 +801,10 @@ video {
     filter: opacity(65%);
   }
 }
+
+/*
+Header--------------------------------------------------
+ */
 
 .d-header-icons {
   .icon {
