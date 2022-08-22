@@ -400,14 +400,10 @@ object {
   /* 2 */
 }
 
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
+.d-header-icons {
+  .icon {
+    padding: 0;
+  }
 }
 
 *, ::before, ::after {
@@ -840,3 +836,12 @@ video {
 }
 
 
+//--------------------------------------------------
+//Header
+//--------------------------------------------------
+
+.d-header-icons {
+  .icon {
+    padding: 0;
+  }
+}
