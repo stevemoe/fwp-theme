@@ -698,8 +698,12 @@ video {
   background-color: #001725;
 }
 
-.bg-white\/95 {
-  background-color: rgb(255 255 255 / 0.95);
+.bg-\[\#F9D973\] {
+  background-color: #F9D973;
+}
+
+.bg-\[\#E5E5E5\] {
+  background-color: #E5E5E5;
 }
 
 .py-2 {
@@ -808,6 +812,10 @@ video {
 
 .hover\:bg-\[\#001725\]\/80:hover {
   background-color: rgb(0 23 37 / 0.8);
+}
+
+.hover\:bg-\[\#F9D973\]:hover {
+  background-color: #F9D973;
 }
 
 .group:hover .group-hover\:scale-105 {
