@@ -721,16 +721,12 @@ video {
   text-align: center;
 }
 
-.font-\[Duper\] {
-  font-family: Duper;
+.font-display {
+  font-family: Explorer;
 }
 
 .font-\[\'primozaIsMessy\'\] {
   font-family: 'primozaIsMessy';
-}
-
-.font-display {
-  font-family: Explorer;
 }
 
 .text-\[14vw\] {
@@ -797,7 +793,7 @@ video {
 @font-face {
   font-family: "Explorer";
 
-  src: url("assets/Explorer-Regular.otf") format("opentype");
+  src: url("./assets/Explorer-Regular.otf") format("otf");
 
   font-weight: 400;
 
