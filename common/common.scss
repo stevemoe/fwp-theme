@@ -698,6 +698,10 @@ video {
   background-color: #001725;
 }
 
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
 .bg-\[\#F9D973\] {
   background-color: #F9D973;
 }
@@ -731,6 +735,10 @@ video {
 
 .font-\[\'primozaIsMessy\'\] {
   font-family: 'primozaIsMessy';
+}
+
+.font-\[Explorer\] {
+  font-family: Explorer;
 }
 
 .text-\[14vw\] {
@@ -808,6 +816,10 @@ video {
   #main-outlet-wrapper {
     filter: opacity(65%);
   }
+}
+
+.hover\:bg-\[\#001725\]\/80:hover {
+  background-color: rgb(0 23 37 / 0.8);
 }
 
 .hover\:bg-\[\#F9D973\]:hover {
