@@ -2,6 +2,9 @@
 module.exports = {
     content: ["./javascripts/**/*.{html,js,hbs}", "./common/**/*.html", "./common/**/*.html"],
     theme: {
+        fontFamily: {
+          'display' :['Explorer']
+        },
         extend: {},
     },
     plugins: [],
