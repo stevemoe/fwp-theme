@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Duper";
+  src: url("https://cdn.primoza.de/files/Duper-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Duper-Bold";
+  src: url("https://cdn.primoza.de/files/Duper-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "primozaIsMessy";
+  src: url("https://cdn.primoza.de/files/primozaIsMessy.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+#main-outlet-wrapper {
+    transition: filter 0.4s ease-out;
+    }
+
+.composer-open {
+    #main-outlet-wrapper {
+    filter: opacity(65%);
+    
+    }
+}
+
+
