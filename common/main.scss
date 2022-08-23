@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --d-max-width: 1800px;
+}
+
 @font-face {
   font-family: "Duper";
   src: url("https://cdn.primoza.de/files/Duper-Regular.woff2") format("woff2");
