@@ -254,6 +254,10 @@
   align-content: center;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -315,6 +319,10 @@
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-display {
