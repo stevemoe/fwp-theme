@@ -15,24 +15,6 @@ export default apiInitializer("0.8", (api) => {
     }
   });
 
-  api.createWidget('increment-button', {
-    tagName: 'button',
-    buildKey: () => 'increment-button',
-
-    defaultState() {
-      return { clicks: 0 };
-    },
-
-    html(attrs, state) {
-      return `Click me! ${state.clicks} clicks`;
-    },
-
-    click() {
-      this.state.clicks++;
-      this.sendWidgetAction('action');
-    }
-  });
-
 
   api.createWidget("create-topic", {
     tagName: "div.create-topic"
