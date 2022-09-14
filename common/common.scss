@@ -262,6 +262,10 @@
   justify-content: space-evenly;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -319,10 +323,6 @@
 
 .text-center {
   text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-display {
@@ -424,6 +424,13 @@ Header--------------------------------------------------
   }
 }
 
+/*
+Search-Menu--------------------------------------------------
+ */
+
+.search-menu {
+}
+
 .hover\:bg-\[\#F9D973\]:hover {
   background-color: #F9D973;
 }
@@ -442,12 +449,6 @@ Header--------------------------------------------------
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:gap-0 {
-    gap: 0px;
   }
 }
 
