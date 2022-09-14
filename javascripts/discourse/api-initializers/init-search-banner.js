@@ -29,6 +29,7 @@ export default apiInitializer("0.8", (api) => {
 
     click() {
       this.state.clicks++;
+      this.sendWidgetAction('searchMenu');
     }
   });
 
