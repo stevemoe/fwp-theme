@@ -198,10 +198,6 @@
   margin-bottom: 12rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mb-20 {
   margin-bottom: 5rem;
 }
@@ -242,32 +238,12 @@
   flex-direction: row;
 }
 
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
 .flex-wrap {
   flex-wrap: wrap;
 }
 
-.content-center {
-  align-content: center;
-}
-
 .items-center {
   align-items: center;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.gap-12 {
-  gap: 3rem;
 }
 
 .gap-10 {
@@ -438,10 +414,10 @@ Search-Menu--------------------------------------------------
 
 .search-widget {
   .search-menu {
-    border: 1px solid #CACACA;
-    border-radius: 999px;
-    display: flex;
-    flex-direction: row-reverse;
+    //border: 1px solid #CACACA;
+    //border-radius: 999px;
+    //display: flex;
+    //flex-direction: row-reverse;
     background: #fbfaf8;
     opacity: 0.6;
     .btn {
