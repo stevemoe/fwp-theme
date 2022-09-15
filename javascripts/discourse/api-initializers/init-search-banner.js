@@ -155,7 +155,6 @@ export default apiInitializer("0.8", (api) => {
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
-        tagName: "div.search-panel",
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
