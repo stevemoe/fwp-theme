@@ -146,8 +146,14 @@ export default apiInitializer("0.8", (api) => {
   });
 
   api.createWidget("search-widget", {
-    tagName: "div.search-widget"
+    tagName: "div.search-widget",
+
+    html() {
+      return h('search-menu')
+    }
+
   });
+
 
   api.decorateWidget("search-widget:after", function(helper) {
     const searchWidget = helper.widget;
@@ -155,6 +161,7 @@ export default apiInitializer("0.8", (api) => {
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
+
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });

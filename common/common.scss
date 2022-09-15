@@ -198,12 +198,12 @@
   margin-bottom: 12rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .flex {
@@ -262,16 +262,16 @@
   justify-content: space-evenly;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-12 {
-  gap: 3rem;
 }
 
 .overflow-hidden {
@@ -452,7 +452,6 @@ Search-Menu--------------------------------------------------
 .hover\:bg-\[\#F9D973\]:hover {
   background-color: #F9D973;
 }
-
 
 .group:hover .group-hover\:scale-105 {
   --tw-scale-x: 1.05;
