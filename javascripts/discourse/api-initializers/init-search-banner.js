@@ -154,7 +154,7 @@ export default apiInitializer("0.8", (api) => {
     const searchMenuVisible = searchWidget.state.searchVisible;
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
-      return helper.attach("search-menu", {
+      return helper.attach("search-menu flex flex-row", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget"
       });
