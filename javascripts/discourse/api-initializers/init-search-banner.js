@@ -29,7 +29,7 @@ export default apiInitializer("0.8", (api) => {
         composerController.open({ action: Composer.CREATE_TOPIC, draftKey: Composer.DRAFT });
       };
       return helper.h("button", {
-        className: "hover:bg-[#F9D973] bg-yellow text-black font-bold py-2 px-4 rounded-full border border-gray-border",
+        className: "hover:bg-[#F9D973]/80 bg-yellow text-black font-bold py-2 px-4 rounded-full border border-gray-border",
         onclick: createTopic
       }, 'Frage stellen' );
     } else {
