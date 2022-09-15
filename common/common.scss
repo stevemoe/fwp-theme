@@ -437,11 +437,14 @@ Search-Menu--------------------------------------------------
  */
 
 .search-menu {
+  border: 1px solid #CACACA;
+  border-radius: 999px;
   display: flex;
   flex-direction: row-reverse;
+  .btn {
+    background: transparent;
+  }
   .search-input {
-    border: 1px solid #CACACA;
-    border-radius: 114px;
   }
 }
 
