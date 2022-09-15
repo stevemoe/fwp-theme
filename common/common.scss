@@ -242,6 +242,10 @@
   flex-direction: row;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -433,6 +437,8 @@ Search-Menu--------------------------------------------------
  */
 
 .search-menu {
+  display: flex;
+  flex-direction: row-reverse;
   .search-input {
     border: 1px solid #CACACA;
     border-radius: 114px;

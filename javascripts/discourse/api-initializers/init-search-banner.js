@@ -146,8 +146,7 @@ export default apiInitializer("0.8", (api) => {
   });
 
   api.createWidget("search-widget", {
-    tagName: "div.search-widget",
-    className: "flex flex-row"
+    tagName: "div.search-widget"
   });
 
   api.decorateWidget("search-widget:after", function(helper) {
@@ -156,6 +155,7 @@ export default apiInitializer("0.8", (api) => {
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
+        className: "flex flex-row-reverse",
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
