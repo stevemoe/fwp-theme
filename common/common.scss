@@ -298,10 +298,6 @@
   background-color: #f9d973;
 }
 
-.bg-\[\#F9D973\] {
-  background-color: #F9D973;
-}
-
 .bg-\[\#E5E5E5\] {
   background-color: #E5E5E5;
 }
@@ -358,16 +354,16 @@
   letter-spacing: 0.05em;
 }
 
-.text-white {
-  color: #fbfaf8;
+.text-black {
+  color: #001725;
 }
 
 .text-\[\#FBFAF8\] {
   color: #FBFAF8;
 }
 
-.text-black {
-  color: #001725;
+.text-white {
+  color: #fbfaf8;
 }
 
 .filter {
@@ -429,7 +425,6 @@ Search-Menu--------------------------------------------------
  */
 
 .search-menu {
-  display: flex;
   .search-input {
     border: 1px solid #CACACA;
     border-radius: 114px;
