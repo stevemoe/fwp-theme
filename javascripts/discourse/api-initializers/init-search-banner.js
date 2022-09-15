@@ -1,6 +1,7 @@
 import { apiInitializer } from "discourse/lib/api";
 import { logSearchLinkClick } from "discourse/lib/search";
 import { doLogin } from "discourse/models/login-method";
+import {h} from "virtual-dom";
 
 export default apiInitializer("0.8", (api) => {
   const enableConnectorName = settings.plugin_outlet;
