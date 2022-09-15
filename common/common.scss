@@ -286,8 +286,16 @@
   border-radius: 1.5rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-gray-border {
+  border-color: #cacaca;
 }
 
 .border-\[\#001725\] {

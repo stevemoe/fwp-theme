@@ -29,13 +29,13 @@ export default apiInitializer("0.8", (api) => {
         composerController.open({ action: Composer.CREATE_TOPIC, draftKey: Composer.DRAFT });
       };
       return helper.h("button", {
-        className: "hover:bg-[#F9D973] bg-yellow text-black font-bold py-2 px-4 rounded-full",
+        className: "hover:bg-[#F9D973] bg-yellow text-black font-bold py-2 px-4 rounded-full border border-gray-border",
         onclick: createTopic
       }, 'Frage stellen' );
     } else {
       return helper.attach("button", {
         label: "log_in",
-        className: "hover:bg-[#F9D973] bg-yellow text-black font-bold py-2 px-4 rounded-full",
+        className: "hover:bg-[#F9D973] bg-yellow text-black font-bold py-2 px-4 rounded-full border border-gray-border",
         action: "showLogin",
         icon: "user",
       }, 'Anmelden um eine Frage zu stellen' );
@@ -146,7 +146,8 @@ export default apiInitializer("0.8", (api) => {
   });
 
   api.createWidget("search-widget", {
-    tagName: "div.search-widget"
+    tagName: "div.search-widget",
+    className: "flex flex-row"
   });
 
   api.decorateWidget("search-widget:after", function(helper) {
@@ -157,7 +158,6 @@ export default apiInitializer("0.8", (api) => {
       return helper.attach("search-menu", {
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
-        className: "flex flex-row"
       });
     }
   });
