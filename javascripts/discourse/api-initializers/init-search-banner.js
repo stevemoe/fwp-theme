@@ -111,7 +111,7 @@ export default apiInitializer("0.8", (api) => {
     panelContents() {
       const formFactor = this.state.formFactor;
       let showHeaderResults =
-        this.state.showHeaderResults == null ||
+        this.state.showHeaderResults === null ||
         this.state.showHeaderResults === true;
       let contents = [];
 
@@ -155,6 +155,7 @@ export default apiInitializer("0.8", (api) => {
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
+        tagName: "div.search-panel",
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
