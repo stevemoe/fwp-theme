@@ -148,15 +148,10 @@ export default apiInitializer("0.8", (api) => {
 
   api.createWidget("search-widget", {
     tagName: "div.search-widget",
-
-    html() {
-      return h('search-menu')
-    }
-
   });
 
 
-  api.decorateWidget("search-widget:after", function(helper) {
+  api.decorateWidget("search-widget:before", function(helper) {
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
 
