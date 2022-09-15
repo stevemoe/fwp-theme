@@ -436,18 +436,20 @@ Header--------------------------------------------------
 Search-Menu--------------------------------------------------
  */
 
-.search-menu {
-  border: 1px solid #CACACA;
-  border-radius: 999px;
-  display: flex;
-  flex-direction: row-reverse;
-  background: var(--white);
-  opacity: 0.6;
-  .btn {
-    background: transparent;
-  }
-  .search-input {
-    border: 0;
+.search-widget {
+  .search-menu {
+    border: 1px solid #CACACA;
+    border-radius: 999px;
+    display: flex;
+    flex-direction: row-reverse;
+    background: #fbfaf8;
+    opacity: 0.6;
+    .btn {
+      background: transparent;
+    }
+    .search-input {
+      border: 0;
+    }
   }
 }
 
