@@ -151,7 +151,7 @@ export default apiInitializer("0.8", (api) => {
   });
 
 
-  api.decorateWidget("search-widget:before", function(helper) {
+  api.decorateWidget("search-widget:after", function(helper) {
     const searchWidget = helper.widget;
     const searchMenuVisible = searchWidget.state.searchVisible;
 
