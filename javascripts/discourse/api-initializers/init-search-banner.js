@@ -127,7 +127,9 @@ export default apiInitializer("0.8", (api) => {
       }
 
       contents = contents.concat(...corePanelContents.call(this));
+      console.log(contents);
       let results = contents.find((w) => w.name === "search-menu-results");
+      console.log(results);
       if (results && results.attrs.results) {
         $(".search-menu.search-header").addClass("has-results");
       } else {
