@@ -155,7 +155,6 @@ export default apiInitializer("0.8", (api) => {
 
     if (!searchMenuVisible && !searchWidget.attrs.topic) {
       return helper.attach("search-menu", {
-        className: "flex flex-row-reverse",
         contextEnabled: searchWidget.state.contextEnabled,
         formFactor: "widget",
       });
