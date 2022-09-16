@@ -90,8 +90,9 @@ $max-width: 600px;
       margin: 0;
       width: 100%;
       padding-right: 4em;
+      padding-left: 2em;
       color: $gray-dark;
-      font-family: 'Inter';
+      font-family: Inter;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
@@ -110,6 +111,7 @@ $max-width: 600px;
     opacity: 0.6;
     box-shadow: $shadow;
     backdrop-filter: blur(4px);
+
     #search-term {
       background: none;
     }
