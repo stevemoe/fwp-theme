@@ -37,10 +37,28 @@
 }
 
 /*
+Colors--------------------------------------------------
+ */
+
+$blue: #8aa0bcv;
+$purple: #9787ab;
+$pink: #ff49db;
+$orange: #f49c86;
+$green: #9fc9c2;
+$turquoise: #9fc9c2;
+$yellow: #f9d973;
+$gray-dark: #646464;
+$gray: #8492a6;
+$gray-light: #d3dce6;
+$black: #001725;
+$white: #fbfaf8;
+$gray-border: #cacaca;
+
+/*
 Shadows--------------------------------------------------
  */
 
-$shadow: px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 
 /*
 Header--------------------------------------------------
@@ -69,6 +87,7 @@ $max-width: 600px;
       margin: 0;
       width: 100%;
       padding-right: 4em;
+      color: $gray-dark;
     }
   }
 
@@ -76,11 +95,12 @@ $max-width: 600px;
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
-    border: 1px solid #CACACA;
+    border: 1px solid $gray-border;
     border-radius: 9999px;
-    background: #fbfaf8;
-    opacity: 0.8;
+    background: $white;
+    opacity: 0.6;
     box-shadow: $shadow;
+    backdrop-filter: blur(4px);
     #search-term {
       background: none;
     }
