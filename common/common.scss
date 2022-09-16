@@ -434,6 +434,9 @@ Search-Menu--------------------------------------------------
 
 .search-widget {
   position: relative;
+  .searching a.show-advanced-search {
+    display: none;
+  }
   .search-menu {
     .search-input {
       background: #fbfaf8;
