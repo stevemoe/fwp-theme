@@ -54,15 +54,15 @@ Search-Menu--------------------------------------------------
 .search-widget {
 
   .search-menu {
-    background: #fbfaf8;
-    opacity: 0.6;
 
-    .btn {
-      background: transparent;
-    }
 
     .search-input {
-      border: 0;
+      background: #fbfaf8;
+      opacity: 0.6;
+      border: 1px solid #CACACA;
+      border-radius: 999px;
+      display: flex;
+      flex-direction: row-reverse;
     }
   }
 }
@@ -73,9 +73,11 @@ Search-Menu--------------------------------------------------
   order: 2;
   right: 0;
   background: transparent;
+
   .discourse-no-touch & {
     &:hover {
       background: transparent;
+
       .d-icon {
         color: var(--primary-high);
       }
