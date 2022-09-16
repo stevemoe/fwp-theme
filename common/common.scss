@@ -485,6 +485,7 @@ $max-width: 600px;
     }
   }
   .search-input {
+    height: inherit;
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
