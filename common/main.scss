@@ -82,6 +82,9 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
+    align-items: center;
+    width: 475px;
+    height: 64px;
 
     input[type="text"] {
       margin: 0;
