@@ -54,10 +54,6 @@ Search-Menu--------------------------------------------------
 .search-widget {
 
   .search-menu {
-    //border: 1px solid #CACACA;
-    //border-radius: 999px;
-    //display: flex;
-    //flex-direction: row-reverse;
     background: #fbfaf8;
     opacity: 0.6;
 
@@ -67,6 +63,22 @@ Search-Menu--------------------------------------------------
 
     .search-input {
       border: 0;
+    }
+  }
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 2;
+  order: 2;
+  right: 0;
+  background: transparent;
+  .discourse-no-touch & {
+    &:hover {
+      background: transparent;
+      .d-icon {
+        color: var(--primary-high);
+      }
     }
   }
 }
