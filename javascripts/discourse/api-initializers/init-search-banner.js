@@ -119,7 +119,7 @@ export default apiInitializer("0.8", (api) => {
       if (formFactor === "widget") {
         contents.push(
           this.attach("button", {
-            icon: "search",
+            icon: "fwp-search",
             className: "search-icon text-[#FBFAF8]",
             action: "showResults"
           })

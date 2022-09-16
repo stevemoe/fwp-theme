@@ -10,7 +10,8 @@
   "assets": {
     "forum_bg": "assets/forum_bg.svg",
     "pflanze-licht": "assets/pflanze-licht.jpg",
-    "explorer": "assets/Explorer-Regular.otf"
+    "explorer": "assets/Explorer-Regular.otf",
+    "icons-sprite": "assets/fwp-icons.svg"
   },
   "color_schemes": {
     "Hell": {
