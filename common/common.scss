@@ -253,7 +253,7 @@ Usage:
 
   font-named-instance: 'Regular';
 
-  src: url("Inter-roman.var.woff2?v=3.19") format("woff2");
+  src: url("./assets/inter-font/Inter-roman.var.woff2?v=3.19") format("woff2");
 }
 
 @font-face {
@@ -267,6 +267,6 @@ Usage:
 
   font-named-instance: 'Italic';
 
-  src: url("Inter-italic.var.woff2?v=3.19") format("woff2");
+  src: url("./assets/inter-font/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
 
