@@ -30,13 +30,13 @@ export default apiInitializer("0.8", (api) => {
         composerController.open({ action: Composer.CREATE_TOPIC, draftKey: Composer.DRAFT });
       };
       return helper.h("button", {
-        className: "hover:bg-gray bg-yellow w-64 h-4 text-black drop-shadow font-semibold py-2 px-4 rounded-full",
+        className: "hover:bg-gray bg-yellow w-64 h-16 text-black drop-shadow font-semibold py-2 px-4 rounded-full",
         onclick: createTopic
       }, 'Frage stellen' );
     } else {
       return helper.attach("button", {
         label: "log_in",
-        className: "hover:bg-gray bg-yellow w-64 h-4 text-black drop-shadow font-semibold py-2 px-4 rounded-full",
+        className: "hover:bg-gray bg-yellow w-64 h-16 text-black drop-shadow font-semibold py-2 px-4 rounded-full",
         action: "showLogin",
         icon: "user",
       }, 'Anmelden um eine Frage zu stellen' );
