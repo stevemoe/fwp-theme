@@ -5,6 +5,6 @@ de:
     or: "oder"
     question: "Frage stellen"
 
-    js:
-      bookmarks:
-        search: "Durchsuche die Community..."
+  js:
+    bookmarks:
+      search: "Durchsuche die Community..."
