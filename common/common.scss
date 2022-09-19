@@ -389,10 +389,6 @@
   --d-max-width: 1576px;
 }
 
-#main-outlet-wrapper {
-  padding: 72px;
-}
-
 @font-face {
   font-family: "Duper";
 
@@ -426,6 +422,7 @@ body {
 
 #main-outlet-wrapper {
   transition: filter 0.4s ease-out;
+  padding: 72px;
 }
 
 .composer-open {
@@ -487,6 +484,7 @@ Search-Menu--------------------------------------------------
 $max-width: 600px;
 
 .custom-search-banner-wrap {
+  margin-left: 72px;
   .search-menu {
     position: relative;
     display: flex;
