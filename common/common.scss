@@ -270,3 +270,586 @@ Usage:
   src: url("./assets/inter-font/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
 
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.m-8 {
+  margin: 2rem;
+}
+
+.my-48 {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.grid {
+  display: grid;
+}
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-gray-border {
+  border-color: #cacaca;
+}
+
+.border-\[\#001725\] {
+  border-color: #001725;
+}
+
+.bg-yellow {
+  background-color: #f9d973;
+}
+
+.bg-\[\#E5E5E5\] {
+  background-color: #E5E5E5;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-explorer {
+  font-family: Explorer;
+}
+
+.font-\[\'primozaIsMessy\'\] {
+  font-family: 'primozaIsMessy';
+}
+
+.text-7xl {
+  font-size: 80px;
+  line-height: 96px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.text-black {
+  color: #001725;
+}
+
+.text-\[\#FBFAF8\] {
+  color: #FBFAF8;
+}
+
+.text-white {
+  color: #fbfaf8;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+:root {
+  --d-max-width: 1800px;
+}
+
+@font-face {
+  font-family: "Duper";
+
+  src: url("https://cdn.primoza.de/files/Duper-Regular.woff2") format("woff2");
+
+  font-weight: 400;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Duper-Bold";
+
+  src: url("https://cdn.primoza.de/files/Duper-Bold.woff2") format("woff2");
+
+  font-weight: 700;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Explorer;
+
+  src: url($explorer) format("opentype");
+}
+
+#main-outlet-wrapper {
+  transition: filter 0.4s ease-out;
+}
+
+.composer-open {
+  #main-outlet-wrapper {
+    filter: opacity(65%);
+  }
+}
+
+/*
+Colors--------------------------------------------------
+ */
+
+$blue: #8aa0bcv;
+
+$purple: #9787ab;
+
+$pink: #ff49db;
+
+$orange: #f49c86;
+
+$green: #9fc9c2;
+
+$turquoise: #9fc9c2;
+
+$yellow: #f9d973;
+
+$gray-dark: #646464;
+
+$gray: #8492a6;
+
+$gray-light: #d3dce6;
+
+$black: #001725;
+
+$white: #fbfaf8;
+
+$gray-border: #cacaca;
+
+/*
+Shadows--------------------------------------------------
+ */
+
+$shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+/*
+Header--------------------------------------------------
+ */
+
+.d-header-icons {
+  .icon {
+    padding: 0;
+  }
+}
+
+/*
+Search-Menu--------------------------------------------------
+ */
+
+$max-width: 600px;
+
+.custom-search-banner-wrap {
+  .search-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 475px;
+    height: 64px;
+    input[type="text"] {
+      margin: 0;
+      width: 100%;
+      padding-right: 4em;
+      padding-left: 2em;
+      color: $gray-dark;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  .search-input {
+    height: inherit;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $gray-border;
+    border-radius: 9999px;
+    background: $white;
+    opacity: 0.6;
+    box-shadow: $shadow;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    #search-term {
+      background: none;
+    }
+    .searching {
+      top: 0.5em;
+      right: 2.25em;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    z-index: 2;
+    order: 2;
+    right: 0;
+    background: transparent;
+    .discourse-no-touch & {
+      &:hover {
+        background: transparent;
+        .d-icon {
+          color: var(--primary-high);
+        }
+      }
+    }
+  }
+  .search-context,
+  .results {
+    margin: 0 auto;
+    max-width: $max-width;
+  }
+  .search-context {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 2.67em;
+    display: inline-flex;
+    align-items: center;
+    label {
+      margin-right: 1em;
+    }
+  }
+  .results {
+    box-sizing: border-box;
+    background: var(--secondary);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    width: $max-width;
+    z-index: 9;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: 2.4em;
+    right: 0;
+    padding: 0.5em;
+    @include breakpoint(mobile-extra-large) {
+      width: 100%;
+    }
+    ul,
+    ol {
+      list-style-type: none;
+      margin: 0;
+    }
+  }
+  .searching a.show-advanced-search {
+    display: none;
+  }
+  .search-link .d-icon {
+    color: var(--primary-medium);
+  }
+  span.keyword {
+    color: var(--primary);
+  }
+}
+
+.hover\:bg-\[\#F9D973\]:hover {
+  background-color: #F9D973;
+}
+
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .md\:gap-\[10vw\] {
+    gap: 10vw;
+  }
+}
