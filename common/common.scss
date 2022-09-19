@@ -337,8 +337,9 @@
   font-family: 'primozaIsMessy';
 }
 
-.text-\[14vw\] {
-  font-size: 14vw;
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .text-2xl {
@@ -510,17 +511,6 @@ $max-width: 600px;
       right: 2.25em;
     }
   }
-  h1 {
-    font-size: var(--font-up-6);
-    line-height: $line-height-medium;
-    @include breakpoint(tablet) {
-      font-size: var(--font-up-4);
-    }
-  }
-  h1,
-  p {
-    text-align: center;
-  }
   .search-icon {
     position: absolute;
     z-index: 2;
@@ -598,16 +588,5 @@ $max-width: 600px;
 @media (min-width: 768px) {
   .md\:gap-\[10vw\] {
     gap: 10vw;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:text-\[5vw\] {
-    font-size: 5vw;
   }
 }
