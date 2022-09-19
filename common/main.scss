@@ -1,4 +1,4 @@
-@import "../assets/inter-font/inter.scss";
+@import url(https://fonts.googleapis.com/css?family=Inter);
 
 @tailwind base;
 @tailwind components;
@@ -94,7 +94,7 @@ $max-width: 600px;
       padding-right: 4em;
       padding-left: 2em;
       color: $gray-dark;
-      font-family: Inter;
+      font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
