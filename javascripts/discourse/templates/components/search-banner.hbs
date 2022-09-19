@@ -1,10 +1,10 @@
 {{#if shouldDisplay}}
     <div class="custom-search-banner flex align-center">
-        <div class="wrap custom-search-banner-wrap flex flex-wrap md:gap-[10vw] gap:10 relative">
+        <div class="wrap custom-search-banner-wrap flex flex-wrap md:gap-[10vw] gap-10">
             <h1 class="text-7xl font-explorer text-black tracking-wider font-normal">{{{theme-i18n
                     "search_banner.headline"}}}</h1>
 
-            <div class="flex flex-col flex-wrap content-center mt-2 gap-12 absolute top-10 right-0">
+            <div class="flex flex-col flex-wrap content-center mt-2 gap-12">
                 {{mount-widget widget="search-widget"}}
                 <div class="flex flex-row gap-10 items-center">
                     <p class="font-semibold">{{theme-i18n "search_banner.or"}}</p>
