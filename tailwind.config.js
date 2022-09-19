@@ -3,7 +3,10 @@ module.exports = {
     content: ["./javascripts/**/*.{html,js,hbs}", "./common/**/*.html", "./common/**/*.html"],
     theme: {
         fontFamily: {
-          'display' :['Explorer']
+            'explorer': ['Explorer']
+        },
+        fontSize: {
+            '7xl': ['80px', '96px']
         },
         extend: {},
         colors: {
