@@ -11,8 +11,7 @@
     "forum_bg": "assets/forum_bg.svg",
     "pflanze-licht": "assets/pflanze-licht.jpg",
     "explorer": "assets/Explorer-Regular.otf",
-    "icons-sprite": "assets/fwp-icons.svg",
-    "inter": "assets/inter-font/Inter-"
+    "icons-sprite": "assets/fwp-icons.svg"
   },
   "color_schemes": {
     "Hell": {
