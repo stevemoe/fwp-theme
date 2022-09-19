@@ -355,8 +355,16 @@
   font-weight: 800;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .\!leading-\[1\.2\] {
   line-height: 1.2 !important;
+}
+
+.\!leading-\[96px\] {
+  line-height: 96px !important;
 }
 
 .tracking-wider {
