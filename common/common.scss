@@ -71,7 +71,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
 
   font-style:  normal;
 
@@ -79,11 +79,11 @@
 
   font-display: swap;
 
-  src: url("./assets/inter-font/Inter-Regular.woff2?v=3.19") format("woff2");
+  src: url($inter) format("woff2");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
 
   font-style:  italic;
 
@@ -91,7 +91,7 @@
 
   font-display: swap;
 
-  src: url("./assets/inter-font/Inter-Italic.woff2?v=3.19") format("woff2");
+  src: url($inter + "Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -652,12 +652,6 @@ Usage:
   font-family: Explorer;
 
   src: url($explorer) format("opentype");
-}
-
-@font-face {
-  font-family: Inter;
-
-  src: url($inter) format("woff2");
 }
 
 #main-outlet-wrapper {
