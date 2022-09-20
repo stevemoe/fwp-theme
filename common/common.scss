@@ -216,10 +216,6 @@
   margin-bottom: 8rem;
 }
 
-.-ml-8{
-  margin-left: -2rem;
-}
-
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -262,10 +258,6 @@
 
 .w-screen{
   width: 100vw;
-}
-
-.w-auto{
-  width: auto;
 }
 
 .max-w-\[480px\]{
@@ -375,16 +367,12 @@
   font-family: 'primozaIsMessy';
 }
 
-.text-6xl{
-  font-size: 4rem;
+.text-\[15vw\]{
+  font-size: 15vw;
 }
 
 .text-2xl{
   font-size: 1.5rem;
-}
-
-.text-\[15vw\]{
-  font-size: 15vw;
 }
 
 .font-semibold{
@@ -650,12 +638,12 @@ $max-width: 600px;
 }
 
 @media (min-width: 768px){
-  .md\:ml-14{
-    margin-left: 3.5rem;
-  }
-
   .md\:-ml-8{
     margin-left: -2rem;
+  }
+
+  .md\:ml-14{
+    margin-left: 3.5rem;
   }
 
   .md\:w-\[40rem\]{
