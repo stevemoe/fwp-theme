@@ -6,7 +6,7 @@ module.exports = {
             'explorer': ['Explorer']
         },
         fontSize: {
-            '7xl': ['5rem', '6rem']
+            '7xl': ['5rem', '96px']
         },
         extend: {},
         colors: {
