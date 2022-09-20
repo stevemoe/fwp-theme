@@ -256,6 +256,10 @@
   width: 100vw;
 }
 
+.max-w-\[476px\]{
+  max-width: 476px;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -310,6 +314,10 @@
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.overflow-visible{
+  overflow: visible;
 }
 
 .rounded-full{
