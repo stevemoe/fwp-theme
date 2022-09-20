@@ -199,10 +199,6 @@
   left: 2.5rem;
 }
 
-.-z-10{
-  z-index: -10;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -490,7 +486,7 @@ $shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   background-color: $white;
 }
 
