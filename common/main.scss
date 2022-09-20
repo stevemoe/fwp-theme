@@ -183,7 +183,7 @@ $max-width: 600px;
   .results {
     box-sizing: border-box;
     background: var(--secondary);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadow;
     position: absolute;
     width: $max-width;
     z-index: 9;
