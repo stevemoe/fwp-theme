@@ -264,6 +264,14 @@
   width: 100vw;
 }
 
+.w-auto{
+  width: auto;
+}
+
+.w-\[\]{
+  width: ;
+}
+
 .max-w-\[480px\]{
   max-width: 480px;
 }
@@ -377,6 +385,10 @@
 
 .text-2xl{
   font-size: 1.5rem;
+}
+
+.text-\[15vw\]{
+  font-size: 15vw;
 }
 
 .font-semibold{
@@ -644,6 +656,14 @@ $max-width: 600px;
 @media (min-width: 768px){
   .md\:ml-14{
     margin-left: 3.5rem;
+  }
+
+  .md\:-ml-8{
+    margin-left: -2rem;
+  }
+
+  .md\:w-\[40rem\]{
+    width: 40rem;
   }
 
   .md\:text-7xl{
