@@ -224,10 +224,6 @@
   margin-top: 3.5rem;
 }
 
-.ml-14{
-  margin-left: 3.5rem;
-}
-
 .mb-20{
   margin-bottom: 5rem;
 }
@@ -268,8 +264,8 @@
   width: 100vw;
 }
 
-.max-w-\[476px\]{
-  max-width: 476px;
+.max-w-\[480px\]{
+  max-width: 480px;
 }
 
 .grid-cols-1{
@@ -373,11 +369,6 @@
 
 .font-\[\'primozaIsMessy\'\]{
   font-family: 'primozaIsMessy';
-}
-
-.text-7xl{
-  font-size: 80px;
-  line-height: 96px;
 }
 
 .font-semibold{
@@ -486,7 +477,7 @@ $shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: $white;
 }
 
@@ -510,7 +501,7 @@ Header--------------------------------------------------
 
 .d-header > .wrap {
   padding: 0;
-  margin: 0 72px;
+  margin: 0 4.5rem;
 }
 
 .d-header-icons {
@@ -530,8 +521,8 @@ $max-width: 600px;
     position: relative;
     display: flex;
     align-items: center;
-    width: 475px;
-    height: 64px;
+    width: 30rem;
+    height: 4rem;
     input[type="text"] {
       margin: 0;
       width: 100%;
@@ -539,7 +530,7 @@ $max-width: 600px;
       padding-left: 2em;
       color: $black;
       font-style: normal;
-      line-height: 24px;
+      line-height: 1.5rem;
     }
   }
   .search-input {
@@ -570,14 +561,14 @@ $max-width: 600px;
     background: transparent;
     .d-icon {
       color: $gray-dark;
-      scale: 2;
-      margin-right: 32px;
+      margin-right: 2rem;
     }
     .discourse-no-touch & {
       &:hover {
         background: transparent;
         .d-icon {
           color: $black;
+          scale: 2;
         }
       }
     }
@@ -600,10 +591,11 @@ $max-width: 600px;
   }
   .results {
     box-sizing: border-box;
+    border-radius: 2rem;
     background: var(--secondary);
     box-shadow: $shadow;
     position: absolute;
-    width: $max-width;
+    width: inherit;
     z-index: 9;
     margin-left: auto;
     margin-right: auto;
@@ -639,4 +631,15 @@ $max-width: 600px;
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px){
+  .md\:ml-14{
+    margin-left: 3.5rem;
+  }
+
+  .md\:text-7xl{
+    font-size: 5rem;
+    line-height: 6rem;
+  }
 }
