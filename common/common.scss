@@ -371,6 +371,14 @@
   font-family: 'primozaIsMessy';
 }
 
+.text-6xl{
+  font-size: 4rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -639,7 +647,7 @@ $max-width: 600px;
   }
 
   .md\:text-7xl{
-    font-size: 80px;
-    line-height: 96px;
+    font-size: 5rem;
+    line-height: 6rem;
   }
 }
