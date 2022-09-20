@@ -396,16 +396,12 @@
   color: #001725;
 }
 
-.text-\[\#FBFAF8\]{
-  color: #FBFAF8;
+.text-gray{
+  color: #8492a6;
 }
 
 .text-white{
   color: #fbfaf8;
-}
-
-.text-gray{
-  color: #8492a6;
 }
 
 .drop-shadow{
@@ -541,7 +537,7 @@ $max-width: 600px;
       width: 100%;
       padding-right: 4em;
       padding-left: 2em;
-      color: $gray-dark;
+      color: $black;
       font-style: normal;
       line-height: 24px;
     }
@@ -576,7 +572,9 @@ $max-width: 600px;
       &:hover {
         background: transparent;
         .d-icon {
-          color: var(--primary-high);
+          color: $gray-dark;
+          scale: 2;
+          margin-right: 32px;
         }
       }
     }

@@ -102,8 +102,6 @@ $max-width: 600px;
 
 .custom-search-banner-wrap {
 
-
-
   .search-menu {
     position: relative;
     display: flex;
@@ -116,7 +114,7 @@ $max-width: 600px;
       width: 100%;
       padding-right: 4em;
       padding-left: 2em;
-      color: $gray-dark;
+      color: $black;
       font-style: normal;
       line-height: 24px;
     }
@@ -155,7 +153,9 @@ $max-width: 600px;
         background: transparent;
 
         .d-icon {
-          color: var(--primary-high);
+          color: $gray-dark;
+          scale: 2;
+          margin-right: 32px;
         }
       }
     }
