@@ -256,11 +256,11 @@
   width: 16rem;
 }
 
-.w-screen{
+.w-\[100vw\]{
   width: 100vw;
 }
 
-.w-\[100vw\]{
+.w-screen{
   width: 100vw;
 }
 
@@ -528,8 +528,8 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
+    flex-basis: 30rem;
     align-items: center;
-    width: 30rem;
     height: 4rem;
     input[type="text"] {
       margin: 0;
@@ -639,6 +639,12 @@ $max-width: 600px;
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 640px){
+  .sm\:overflow-visible{
+    overflow: visible;
+  }
 }
 
 @media (min-width: 768px){
