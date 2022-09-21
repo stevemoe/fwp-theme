@@ -264,8 +264,20 @@
   width: 100vw;
 }
 
+.w-\[480px\]{
+  width: 480px;
+}
+
 .max-w-\[480px\]{
   max-width: 480px;
+}
+
+.flex-initial{
+  flex: 0 1 auto;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .grid-cols-1{
