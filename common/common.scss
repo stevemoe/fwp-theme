@@ -224,6 +224,10 @@
   margin-bottom: 5rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
 .flex{
   display: flex;
 }
@@ -495,7 +499,7 @@ body {
 }
 
 #main-outlet {
-  padding-top: 7.5em;
+  padding-top: 3.5em;
 }
 
 #main-outlet-wrapper {
@@ -513,10 +517,12 @@ Header--------------------------------------------------
  */
 
 .d-header {
-  background-color: $white 0.8;
+  position: fixed;
+  background: rgba(251, 250, 248, 0.5);
   border: 1px solid rgba(200, 200, 200, 0.17);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
 }
 
 .d-header > .wrap {
