@@ -484,6 +484,7 @@ $shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
  */
 
 body {
+  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   background-color: $white;
@@ -529,6 +530,7 @@ $max-width: 600px;
     position: relative;
     display: flex;
     flex-basis: 30rem;
+    flex-shrink: 0;
     align-items: center;
     height: 4rem;
     input[type="text"] {
@@ -642,10 +644,6 @@ $max-width: 600px;
 }
 
 @media (min-width: 640px){
-  .sm\:overflow-visible{
-    overflow: visible;
-  }
-
   .sm\:text-7xl{
     font-size: 5rem;
     line-height: 6rem;
@@ -663,10 +661,5 @@ $max-width: 600px;
 
   .md\:w-\[40rem\]{
     width: 40rem;
-  }
-
-  .md\:text-7xl{
-    font-size: 5rem;
-    line-height: 6rem;
   }
 }
