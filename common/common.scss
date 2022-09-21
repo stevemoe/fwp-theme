@@ -183,8 +183,8 @@
   position: relative;
 }
 
-.-right-80{
-  right: -20rem;
+.-right-96{
+  right: -24rem;
 }
 
 .-top-60{
@@ -197,10 +197,6 @@
 
 .left-10{
   left: 2.5rem;
-}
-
-.-right-96{
-  right: -24rem;
 }
 
 .z-10{
@@ -264,12 +260,12 @@
   width: 34rem;
 }
 
-.w-screen{
-  width: 100vw;
-}
-
 .w-full{
   width: 100%;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .flex-initial{
@@ -498,6 +494,10 @@ body {
   background-color: $white;
 }
 
+#main-outlet {
+  padding-top: 7.5em;
+}
+
 #main-outlet-wrapper {
   transition: filter 0.4s ease-out;
 }
@@ -514,6 +514,9 @@ Header--------------------------------------------------
 
 .d-header {
   background-color: $white 0.8;
+  box-shadow: ;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
 }
 
 .d-header > .wrap {
