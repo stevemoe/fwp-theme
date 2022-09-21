@@ -183,8 +183,8 @@
   position: relative;
 }
 
-.-right-1\/4{
-  right: -25%;
+.-right-80{
+  right: -20rem;
 }
 
 .-top-60{
@@ -197,18 +197,6 @@
 
 .left-10{
   left: 2.5rem;
-}
-
-.right-72{
-  right: 18rem;
-}
-
-.-right-72{
-  right: -18rem;
-}
-
-.-right-80{
-  right: -20rem;
 }
 
 .z-10{
@@ -264,40 +252,20 @@
   min-height: 100%;
 }
 
-.w-\[480px\]{
-  width: 480px;
-}
-
-.w-\[100vw\]{
-  width: 100vw;
-}
-
 .w-64{
   width: 16rem;
-}
-
-.w-screen{
-  width: 100vw;
-}
-
-.w-\[671px\]{
-  width: 671px;
-}
-
-.w-\[40rem\]{
-  width: 40rem;
 }
 
 .w-\[34rem\]{
   width: 34rem;
 }
 
-.flex-initial{
-  flex: 0 1 auto;
+.w-screen{
+  width: 100vw;
 }
 
-.flex-1{
-  flex: 1 1 0%;
+.flex-initial{
+  flex: 0 1 auto;
 }
 
 .grid-cols-1{
@@ -314,10 +282,6 @@
 
 .flex-wrap{
   flex-wrap: wrap;
-}
-
-.content-center{
-  align-content: center;
 }
 
 .content-start{
@@ -407,24 +371,20 @@
   font-family: 'primozaIsMessy';
 }
 
-.text-\[15vw\]{
-  font-size: 15vw;
+.text-\[13vw\]{
+  font-size: 13vw;
 }
 
 .text-2xl{
   font-size: 1.5rem;
 }
 
-.text-\[13vw\]{
-  font-size: 13vw;
+.font-semibold{
+  font-weight: 600;
 }
 
 .font-normal{
   font-weight: 400;
-}
-
-.font-semibold{
-  font-weight: 600;
 }
 
 .tracking-wider{
@@ -569,7 +529,7 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
-    width: 30rem;
+    flex-basis: 75%;
     align-items: center;
     height: 4rem;
     input[type="text"] {
@@ -686,19 +646,5 @@ $max-width: 600px;
   .sm\:text-7xl{
     font-size: 5rem;
     line-height: 6rem;
-  }
-}
-
-@media (min-width: 768px){
-  .md\:-ml-8{
-    margin-left: -2rem;
-  }
-
-  .md\:ml-14{
-    margin-left: 3.5rem;
-  }
-
-  .md\:w-\[40rem\]{
-    width: 40rem;
   }
 }
