@@ -252,24 +252,20 @@
   min-height: 100%;
 }
 
-.w-64{
-  width: 16rem;
+.w-\[480px\]{
+  width: 480px;
 }
 
 .w-\[100vw\]{
   width: 100vw;
 }
 
+.w-64{
+  width: 16rem;
+}
+
 .w-screen{
   width: 100vw;
-}
-
-.w-\[480px\]{
-  width: 480px;
-}
-
-.max-w-\[480px\]{
-  max-width: 480px;
 }
 
 .flex-initial{
@@ -391,12 +387,12 @@
   font-size: 1.5rem;
 }
 
-.font-semibold{
-  font-weight: 600;
-}
-
 .font-normal{
   font-weight: 400;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .tracking-wider{
@@ -541,8 +537,7 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
-    flex-basis: 30rem;
-    flex-shrink: 0;
+    width: 30rem;
     align-items: center;
     height: 4rem;
     input[type="text"] {

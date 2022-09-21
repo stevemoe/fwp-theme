@@ -106,8 +106,7 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
-    flex-basis: 30rem;
-    flex-shrink: 0;
+    width: 30rem;
     align-items: center;
     height: 4rem;
 
