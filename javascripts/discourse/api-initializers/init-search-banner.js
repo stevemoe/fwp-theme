@@ -2,6 +2,8 @@ import { apiInitializer } from "discourse/lib/api";
 import { logSearchLinkClick } from "discourse/lib/search";
 import { doLogin } from "discourse/models/login-method";
 import {h} from "virtual-dom";
+import { iconNode } from "discourse-common/lib/icon-library";
+
 
 export default apiInitializer("0.8", (api) => {
   const enableConnectorName = settings.plugin_outlet;
@@ -118,8 +120,9 @@ export default apiInitializer("0.8", (api) => {
 
       if (formFactor === "widget") {
         contents.push(
-          this.attach("button", {
-            icon: "search",
+          this.attach("link", {
+            title: "search_banner.search",
+            contents: () => iconNode("search") ,
             className: "search-icon text-gray",
             action: "showResults"
           })
@@ -127,9 +130,7 @@ export default apiInitializer("0.8", (api) => {
       }
 
       contents = contents.concat(...corePanelContents.call(this));
-      console.log(contents);
       let results = contents.find((w) => w.name === "search-menu-results");
-      console.log(results);
       if (results && results.attrs.results) {
         $(".search-menu.search-header").addClass("has-results");
       } else {
