@@ -120,8 +120,8 @@ export default apiInitializer("0.8", (api) => {
 
             if (formFactor === "widget") {
                 const searchButton = this.attach("link", {
-                            title: "search_banner.search",
-                            contents: () => iconNode("fwp-search"),
+                            title: "search.search_button",
+                            contents: () => iconNode("search"),
                             className: "search-icon text-gray",
                             action: "showResults"
                         });
