@@ -127,7 +127,7 @@ export default apiInitializer("0.8", (api) => {
                             action: "showResults"
                         });
 
-                contents.push(h(searchButton));
+                contents.push(h("", searchButton));
             }
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
