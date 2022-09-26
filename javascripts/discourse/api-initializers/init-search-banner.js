@@ -111,41 +111,41 @@ export default apiInitializer("0.8", (api) => {
             }
         },
 
-        // panelContents() {
-        //     const formFactor = this.state.formFactor;
-        //     let showHeaderResults =
-        //         this.state.showHeaderResults === null ||
-        //         this.state.showHeaderResults === true;
-        //     let contents = [];
-        //
-        //     if (formFactor === "widget") {
-        //         const searchButton = this.attach("link", {
-        //                     title: "search.search_button",
-        //                     contents: () => iconNode("search"),
-        //                     className: "search-icon text-gray",
-        //                     action: "showResults"
-        //                 });
-        //         contents.push(h("div.search-input", searchButton));
-        //     }
-        //
-        //     contents = contents.concat(...corePanelContents.call(this));
-        //     let results = contents.find((w) => w.name === "search-menu-results");
-        //     if (results && results.attrs.results) {
-        //         $(".search-menu.search-header").addClass("has-results");
-        //     } else {
-        //         $(".search-menu.search-header").removeClass("has-results");
-        //     }
-        //     if (formFactor === "menu" || showHeaderResults) {
-        //         return contents;
-        //     } else {
-        //         return contents.filter((widget) => {
-        //             return (
-        //                 widget.name !== "search-menu-results" &&
-        //                 widget.name !== "search-context"
-        //             );
-        //         });
-        //     }
-        // }
+        panelContents() {
+            const formFactor = this.state.formFactor;
+            let showHeaderResults =
+                this.state.showHeaderResults === null ||
+                this.state.showHeaderResults === true;
+            let contents = [];
+
+            if (formFactor === "widget" ) {
+                const searchButton = this.attach("link", {
+                            title: "search.search_button",
+                            contents: () => iconNode("search"),
+                            className: "search-icon text-gray",
+                            action: "showResults"
+                        });
+                contents.push(h("div.search-input", searchButton));
+            }
+
+            contents = contents.concat(...corePanelContents.call(this));
+            let results = contents.find((w) => w.name === "search-menu-results");
+            if (results && results.attrs.results) {
+                $(".search-menu.search-header").addClass("has-results");
+            } else {
+                $(".search-menu.search-header").removeClass("has-results");
+            }
+            if (formFactor === "menu" || showHeaderResults) {
+                return contents;
+            } else {
+                return contents.filter((widget) => {
+                    return (
+                        widget.name !== "search-menu-results" &&
+                        widget.name !== "search-context"
+                    );
+                });
+            }
+        }
     });
 
     api.createWidget("search-widget", {
