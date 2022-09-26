@@ -128,6 +128,7 @@ export default apiInitializer("0.8", (api) => {
                         });
                 contents.push(h("div.search-button", searchButton));
             }
+            console.log(this);
 console.log(...corePanelContents.call(this));
             contents = contents.concat(...corePanelContents.call(this));
             console.log(contents);
