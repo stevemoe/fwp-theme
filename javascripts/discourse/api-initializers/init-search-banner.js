@@ -3,7 +3,7 @@ import {logSearchLinkClick} from "discourse/lib/search";
 import {doLogin} from "discourse/models/login-method";
 import {h} from "virtual-dom";
 import {iconNode} from "discourse-common/lib/icon-library";
-import{searchInput} from "discourse/app/widgets/search-menu.js"
+
 
 
 export default apiInitializer("0.8", (api) => {
