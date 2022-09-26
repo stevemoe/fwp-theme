@@ -131,7 +131,13 @@ export default apiInitializer("0.8", (api) => {
             }
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
-
+            if (results && results.attrs.results) {
+                $(".search-menu.search-header").addClass("has-results");
+                console.log("add has result");
+                console.log($(".search-menu.search-header"));
+            } else {
+                $(".search-menu.search-header").removeClass("has-results");
+            }
             if (formFactor === "menu" || showHeaderResults) {
                 return contents;
             } else {
