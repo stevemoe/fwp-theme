@@ -126,7 +126,7 @@ export default apiInitializer("0.8", (api) => {
                             className: "search-icon text-gray",
                             action: "showResults"
                         });
-                corePanelContents.push(h("div.search-button", searchButton));
+                contents.push(h("div.search-button", searchButton));
             }
 console.log(...corePanelContents.call(this));
             contents = contents.concat(...corePanelContents.call(this));
