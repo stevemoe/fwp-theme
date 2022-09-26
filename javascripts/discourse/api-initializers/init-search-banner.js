@@ -126,7 +126,8 @@ export default apiInitializer("0.8", (api) => {
                             className: "search-icon text-gray",
                             action: "showResults"
                         });
-                contents.push(h("div.search-button", searchButton));
+
+                contents.push(h(searchButton));
             }
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
