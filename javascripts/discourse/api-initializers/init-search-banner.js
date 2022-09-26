@@ -131,7 +131,7 @@ export default apiInitializer("0.8", (api) => {
             console.log(this);
             console.log("core");
 
-            console.log(...corePanelContents);
+            console.log(corePanelContents);
             contents = contents.concat(...corePanelContents.call(this));
             console.log(contents);
             let results = contents.find((w) => w.name === "search-menu-results");
