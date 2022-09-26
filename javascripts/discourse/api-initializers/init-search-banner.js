@@ -120,7 +120,7 @@ export default apiInitializer("0.8", (api) => {
             let contents = [];
 
             if (formFactor === "widget" ) {
-                const searchButton = this.attach("button", {
+                const searchButton = this.attach("link", {
                             title: "search.search_button",
                             contents: () => iconNode("search"),
                             className: "search-icon text-gray",
