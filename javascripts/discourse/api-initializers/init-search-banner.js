@@ -133,8 +133,6 @@ export default apiInitializer("0.8", (api) => {
             let results = contents.find((w) => w.name === "search-menu-results");
             if (results && results.attrs.results) {
                 $(".search-menu.search-header").addClass("has-results");
-                console.log("add has result");
-                console.log($(".search-menu.search-header"));
             } else {
                 $(".search-menu.search-header").removeClass("has-results");
             }
