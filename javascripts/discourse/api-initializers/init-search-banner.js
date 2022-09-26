@@ -120,7 +120,7 @@ export default apiInitializer("0.8", (api) => {
             let contents = [];
 
             if (formFactor === "widget" ) {
-                const searchButton = this.attach("link", {
+                const searchButton = this.attach("button", {
                             title: "search.search_button",
                             contents: () => iconNode("search"),
                             className: "search-icon text-gray",
@@ -131,11 +131,7 @@ export default apiInitializer("0.8", (api) => {
             }
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
-            if (results && results.attrs.results) {
-                $(".search-menu.search-header").addClass("has-results");
-            } else {
-                $(".search-menu.search-header").removeClass("has-results");
-            }
+
             if (formFactor === "menu" || showHeaderResults) {
                 return contents;
             } else {
