@@ -128,7 +128,7 @@ export default apiInitializer("0.8", (api) => {
                         });
                 contents.push(h("div.search-button", searchButton));
             }
-console.log(corePanelContents);
+console.log(...corePanelContents.call(this));
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
             if (results && results.attrs.results) {
