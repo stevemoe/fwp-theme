@@ -111,14 +111,14 @@ export default apiInitializer("0.8", (api) => {
             const searchInput = document.getElementById("search-term");
 
             if (formFactor === "widget") {
-                const searchButton = this.attach("link#widget-search-logo", {
+                const searchButton = this.attach("link", {
                     title: "search.search_button",
                     contents: () => iconNode("search"),
                     className: "search-icon text-gray",
                     action: "showResults",
                 });
                 console.log(searchButton);
-                contents.push(searchButton);
+                contents.push(h('#widget-search-logo', searchButton));
                 if (searchInput && searchInput.value) {
                     document.getElementById("widget-search-icon").classList.add("hide-search-icon");
                 }
