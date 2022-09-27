@@ -114,7 +114,7 @@ export default apiInitializer("0.8", (api) => {
                 const searchButton = this.attach("link", {
                     title: "search.search_button",
                     contents: () => iconNode("search"),
-                    className: "search-icon text-gray transition-transform",
+                    className: "search-icon text-gray ease-in duration-300",
                     action: "showResults",
                 });
                 contents.push(searchButton);
