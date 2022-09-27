@@ -120,10 +120,10 @@ export default apiInitializer("0.8", (api) => {
                 contents.push(searchButton);
                 if (searchInput && searchInput.value) {
                     document.querySelector(".search-widget .search-icon")?.classList.add("hide-search-icon");
-                    document.querySelector(".search-widget .clear-search")?.classList.remove("hide-clear-search");
+                    document.querySelector(".search-widget .clear-search")?.classList.add("duration-300");
                 } else {
                     document.querySelector(".search-widget .search-icon")?.classList.remove("hide-search-icon");
-                    document.querySelector(".search-widget .clear-search")?.classList.add("hide-clear-search");
+                    document.querySelector(".search-widget .clear-search")?.classList.remove("duration-300");
                 }
             }
             contents = contents.concat(...corePanelContents.call(this));
