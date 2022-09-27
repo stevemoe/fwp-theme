@@ -64,7 +64,7 @@ export default apiInitializer("0.8", (api) => {
         },
 
         html(attrs, state) {
-            if (this.state.formFactor === "widget") {
+            if (this.state.formFactor === "waidget") {
                 return this.panelContents();
             } else {
                 return this._super(attrs, state);
