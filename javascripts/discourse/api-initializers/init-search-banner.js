@@ -122,12 +122,7 @@ export default apiInitializer("0.8", (api) => {
                     className: "clear-search",
                     contents: () => iconNode("times")
                 });
-                if (document.getElementById("search-term") && document.getElementById("search-term").value) {
-
-                    console.log(document.getElementById("search-term").value);
-
-                } else {
-
+                if (!(document.getElementById("search-term") && document.getElementById("search-term").value)) {
                     contents.push(searchButton);
                 }
             }
