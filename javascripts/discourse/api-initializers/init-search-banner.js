@@ -131,8 +131,7 @@ export default apiInitializer("0.8", (api) => {
                     className: "clear-search",
                     contents: () => iconNode("times")
                 });
-                console.log(searchData.term);
-                console.log("searchData.term");
+                console.log(this.state);
                 contents.push(searchButton);
             }
             contents = contents.concat(...corePanelContents.call(this));
