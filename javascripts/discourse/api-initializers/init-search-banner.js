@@ -121,6 +121,8 @@ export default apiInitializer("0.8", (api) => {
                 contents.push(searchButton);
                 if (searchInput && searchInput.value) {
                     document.querySelector(".search-widget .search-icon")?.classList.add("hide-search-icon");
+                } else {
+                    document.querySelector(".search-widget .search-icon")?.classList.remove("hide-search-icon");
                 }
             }
             contents = contents.concat(...corePanelContents.call(this));
