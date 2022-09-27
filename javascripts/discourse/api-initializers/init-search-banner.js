@@ -117,7 +117,7 @@ export default apiInitializer("0.8", (api) => {
                     className: "search-icon text-gray",
                     action: "showResults"
                 });
-                searchInput.push(searchButton);
+                contents.push(searchButton);
                 if (searchInput && searchInput.value) {
                     document.getElementById("search-term").classList.add("hide-search-icon")
                 }
