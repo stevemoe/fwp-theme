@@ -180,6 +180,11 @@ $max-width: 600px;
     display: inline-block;
     background-color: transparent;
 
+    show {
+      background-color: #ff49db;
+      scale: 1;
+    }
+
     .d-icon {
       color: var(--primary-low-mid);
     }

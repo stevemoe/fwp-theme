@@ -276,12 +276,6 @@
   flex: 0 1 auto;
 }
 
-.scale-100{
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -616,6 +610,10 @@ $max-width: 600px;
     padding: 0;
     display: inline-block;
     background-color: transparent;
+    show {
+      background-color: #ff49db;
+      scale: 1;
+    }
     .d-icon {
       color: var(--primary-low-mid);
     }
