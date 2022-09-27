@@ -132,6 +132,7 @@ export default apiInitializer("0.8", (api) => {
                     contents: () => iconNode("times")
                 });
                 console.log(searchData.term);
+                console.log("searchData.term");
                 contents.push(searchButton);
             }
             contents = contents.concat(...corePanelContents.call(this));
