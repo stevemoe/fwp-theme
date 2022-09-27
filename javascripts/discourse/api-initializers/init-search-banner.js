@@ -7,10 +7,7 @@ import {iconNode} from "discourse-common/lib/icon-library";
 
 export default apiInitializer("0.8", (api) => {
     const enableConnectorName = settings.plugin_outlet;
-    const disableConnectorName =
-        enableConnectorName === "above-main-container"
-            ? "below-site-header"
-            : "above-main-container";
+    const disableConnectorName = enableConnectorName === "above-main-container" ? "below-site-header" : "above-main-container";
 
     api.registerConnectorClass(disableConnectorName, "search-banner", {
         shouldRender() {
@@ -57,9 +54,7 @@ export default apiInitializer("0.8", (api) => {
 
         defaultState(attrs) {
             return {
-                formFactor: attrs.formFactor || "menu",
-                showHeaderResults: false,
-                inTopicContext: attrs.inTopicContext
+                formFactor: attrs.formFactor || "menu", showHeaderResults: false, inTopicContext: attrs.inTopicContext
             };
         },
 
@@ -97,9 +92,7 @@ export default apiInitializer("0.8", (api) => {
             const {searchLogId, searchResultId, searchResultType} = attrs;
             if (searchLogId && searchResultId && searchResultType) {
                 logSearchLinkClick({
-                    searchLogId,
-                    searchResultId,
-                    searchResultType
+                    searchLogId, searchResultId, searchResultType
                 });
             }
 
@@ -113,9 +106,7 @@ export default apiInitializer("0.8", (api) => {
 
         panelContents() {
             const formFactor = this.state.formFactor;
-            let showHeaderResults =
-                this.state.showHeaderResults === null ||
-                this.state.showHeaderResults === true;
+            let showHeaderResults = this.state.showHeaderResults === null || this.state.showHeaderResults === true;
             let contents = [];
 
             if (formFactor === "widget") {
@@ -134,8 +125,11 @@ export default apiInitializer("0.8", (api) => {
                 if (document.getElementById("search-term") && document.getElementById("search-term").value) {
 
                     console.log(document.getElementById("search-term").value);
+
+                } else {
+
+                    contents.push(searchButton);
                 }
-                contents.push(searchButton);
             }
             contents = contents.concat(...corePanelContents.call(this));
             let results = contents.find((w) => w.name === "search-menu-results");
@@ -148,10 +142,7 @@ export default apiInitializer("0.8", (api) => {
                 return contents;
             } else {
                 return contents.filter((widget) => {
-                    return (
-                        widget.name !== "search-menu-results" &&
-                        widget.name !== "search-context"
-                    );
+                    return (widget.name !== "search-menu-results" && widget.name !== "search-context");
                 });
             }
         }
@@ -169,8 +160,7 @@ export default apiInitializer("0.8", (api) => {
         if (!searchMenuVisible && !searchWidget.attrs.topic) {
             return helper.attach("search-menu", {
 
-                contextEnabled: searchWidget.state.contextEnabled,
-                formFactor: "widget",
+                contextEnabled: searchWidget.state.contextEnabled, formFactor: "widget",
             });
         }
     });
