@@ -118,6 +118,7 @@ export default apiInitializer("0.8", (api) => {
                     action: "showResults",
                     id: "widget-search-icon"
                 });
+                console.log(searchButton);
                 contents.push(searchButton);
                 if (searchInput && searchInput.value) {
                     document.getElementById("widget-search-icon").classList.add("hide-search-icon");
