@@ -108,6 +108,7 @@ export default apiInitializer("0.8", (api) => {
             const formFactor = this.state.formFactor;
             let showHeaderResults = this.state.showHeaderResults === null || this.state.showHeaderResults === true;
             let contents = [];
+            const searchInput = document.getElementById("search-term");
 
             if (formFactor === "widget") {
                 const searchButton = this.attach("link", {
@@ -116,14 +117,9 @@ export default apiInitializer("0.8", (api) => {
                     className: "search-icon text-gray",
                     action: "showResults"
                 });
-                const clearButton = this.attach("link", {
-                    title: "search.clear_search",
-                    action: "clearSearch",
-                    className: "clear-search",
-                    contents: () => iconNode("times")
-                });
-                if (!(document.getElementById("search-term") && document.getElementById("search-term").value)) {
-                    contents.push(searchButton);
+                searchInput.push(searchButton);
+                if (searchInput && searchInput.value) {
+                    document.getElementById("search-term").classList.add("hide-search-icon")
                 }
             }
             contents = contents.concat(...corePanelContents.call(this));
