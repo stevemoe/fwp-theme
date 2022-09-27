@@ -131,7 +131,7 @@ export default apiInitializer("0.8", (api) => {
                     className: "clear-search",
                     contents: () => iconNode("times")
                 });
-                if (document.getElementById("search-term")) {
+                if (document.getElementById("search-term").value) {
 
                     console.log(document.getElementById("search-term").value);
                 }
