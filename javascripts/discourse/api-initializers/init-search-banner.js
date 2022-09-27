@@ -116,7 +116,7 @@ export default apiInitializer("0.8", (api) => {
                     contents: () => iconNode("search"),
                     className: "search-icon text-gray",
                     action: "showResults",
-                    id: "widget-search-icon"
+                    name: "widget-search-icon"
                 });
                 console.log(searchButton);
                 contents.push(searchButton);
