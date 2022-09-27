@@ -605,6 +605,8 @@ $max-width: 600px;
   a.clear-search {
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-duration: 300ms;
+    margin: 0;
+    padding: 0;
     display: inline-block;
     background-color: transparent;
     .d-icon {
@@ -615,7 +617,7 @@ $max-width: 600px;
     }
   }
   .search-context,
-  .results {
+.results {
     margin: 0 auto;
     max-width: $max-width;
   }
@@ -648,7 +650,7 @@ $max-width: 600px;
       width: 100%;
     }
     ul,
-    ol {
+  ol {
       list-style-type: none;
       margin: 0;
     }
