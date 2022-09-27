@@ -582,7 +582,7 @@ $max-width: 600px;
       right: 2.25em;
     }
   }
-  .hide-search-icon {
+  .hide-search-icon,.hide-clear-search{
     scale: 0;
     visibility: hidden;
   }

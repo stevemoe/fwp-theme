@@ -146,7 +146,7 @@ $max-width: 600px;
     }
   }
 
-  .hide-search-icon {
+  .hide-search-icon,.hide-clear-search{
     scale: 0;
     visibility: hidden;
   }
