@@ -3,7 +3,6 @@ import {logSearchLinkClick} from "discourse/lib/search";
 import {doLogin} from "discourse/models/login-method";
 import {h} from "virtual-dom";
 import {iconNode} from "discourse-common/lib/icon-library";
-import {searchData} from "discourse/lib/search-menu"
 
 
 export default apiInitializer("0.8", (api) => {
@@ -133,7 +132,6 @@ export default apiInitializer("0.8", (api) => {
                     contents: () => iconNode("times")
                 });
                 console.log(this);
-                console.log(searchData);
                 contents.push(searchButton);
             }
             contents = contents.concat(...corePanelContents.call(this));
