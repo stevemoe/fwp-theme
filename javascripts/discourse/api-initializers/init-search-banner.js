@@ -3,7 +3,7 @@ import {logSearchLinkClick} from "discourse/lib/search";
 import {doLogin} from "discourse/models/login-method";
 import {h} from "virtual-dom";
 import {iconNode} from "discourse-common/lib/icon-library";
-import {searchData} from "discourse/app/widgets/search-menu.js"
+import {searchData} from "discourse/lib/search-menu"
 
 
 export default apiInitializer("0.8", (api) => {
@@ -65,7 +65,7 @@ export default apiInitializer("0.8", (api) => {
         },
 
         html(attrs, state) {
-            if (this.state.formFactor === "waidget") {
+            if (this.state.formFactor === "widget") {
                 return this.panelContents();
             } else {
                 return this._super(attrs, state);
