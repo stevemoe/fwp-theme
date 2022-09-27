@@ -602,6 +602,18 @@ $max-width: 600px;
       }
     }
   }
+  a.clear-search {
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 300ms;
+    display: inline-block;
+    background-color: transparent;
+    .d-icon {
+      color: var(--primary-low-mid);
+    }
+    &:hover .d-icon {
+      color: var(--primary-high);
+    }
+  }
   .search-context,
   .results {
     margin: 0 auto;
