@@ -118,9 +118,9 @@ export default apiInitializer("0.8", (api) => {
                     action: "showResults",
                 });
                 console.log(searchButton);
-                contents.push(h('#widget-search-icon', searchButton));
+                contents.push(searchButton);
                 if (searchInput && searchInput.value) {
-                    document.getElementById("widget-search-icon")?.classList.add("hide-search-icon");
+                    document.querySelector(".widget-search-icon").classList.add("hide-search-icon");
                 }
             }
             contents = contents.concat(...corePanelContents.call(this));
