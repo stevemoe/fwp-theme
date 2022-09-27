@@ -114,10 +114,9 @@ export default apiInitializer("0.8", (api) => {
                 const searchButton = this.attach("link", {
                     title: "search.search_button",
                     contents: () => iconNode("search"),
-                    className: "search-icon text-gray",
+                    className: "search-icon text-gray animate-bounce",
                     action: "showResults",
                 });
-                console.log(searchButton);
                 contents.push(searchButton);
                 if (searchInput && searchInput.value) {
                     document.querySelector(".search-widget .search-icon")?.classList.add("hide-search-icon");
