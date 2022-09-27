@@ -146,6 +146,10 @@ $max-width: 600px;
     }
   }
 
+  .search-icon.hide-search-icon {
+    display: none;
+  }
+
   .search-icon {
     position: absolute;
     z-index: 2;
