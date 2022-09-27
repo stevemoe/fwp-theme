@@ -141,7 +141,7 @@ $max-width: 600px;
     }
 
     .searching {
-      top: 0.5em;
+      top: 0;
       right: 2.25em;
     }
   }
@@ -149,13 +149,10 @@ $max-width: 600px;
   .search-icon {
     position: absolute;
     z-index: 2;
-    order: 2;
-    right: 0;
-    background: transparent;
+    right: 2.25em;
 
     .d-icon {
       color: $gray-dark;
-      margin-right: 2rem;
     }
 
     .discourse-no-touch & {

@@ -5,7 +5,6 @@ import {h} from "virtual-dom";
 import {iconNode} from "discourse-common/lib/icon-library";
 
 
-
 export default apiInitializer("0.8", (api) => {
     const enableConnectorName = settings.plugin_outlet;
     const disableConnectorName =
@@ -119,14 +118,20 @@ export default apiInitializer("0.8", (api) => {
                 this.state.showHeaderResults === true;
             let contents = [];
 
-            if (formFactor === "widget" ) {
+            if (formFactor === "widget") {
                 const searchButton = this.attach("link", {
-                            title: "search.search_button",
-                            contents: () => iconNode("search"),
-                            className: "search-icon text-gray",
-                            action: "showResults"
-                        });
-
+                    title: "search.search_button",
+                    contents: () => iconNode("search"),
+                    className: "search-icon text-gray",
+                    action: "showResults"
+                });
+                const clearButton = this.attach("link", {
+                    title: "search.clear_search",
+                    action: "clearSearch",
+                    className: "clear-search",
+                    contents: () => iconNode("times")
+                });
+                console.log(searchData.term);
                 contents.push(searchButton);
             }
             contents = contents.concat(...corePanelContents.call(this));
