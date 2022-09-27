@@ -116,11 +116,11 @@ export default apiInitializer("0.8", (api) => {
                     contents: () => iconNode("search"),
                     className: "search-icon text-gray",
                     action: "showResults",
-
+                    id: "widget-search-icon"
                 });
                 contents.push(searchButton);
                 if (searchInput && searchInput.value) {
-                    document.getElementsByClassName("search-icon").classList.add("hide-search-icon");
+                    document.getElementById("widget-search-icon").classList.add("hide-search-icon");
                 }
             }
             contents = contents.concat(...corePanelContents.call(this));
