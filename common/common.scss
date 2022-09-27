@@ -602,7 +602,7 @@ $max-width: 600px;
       }
     }
   }
-  a.clear-search {
+  .search-menu .searching a.clear-search {
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-duration: 300ms;
     margin: 0;
