@@ -145,14 +145,16 @@ $max-width: 600px;
     }
 
 
+    .search-input:focus-within {
+      border:none;
+      outline: none;
+    }
+
     .search-input {
       width: 100%;
       border: none;
 
-      :focus-within {
-        border:none;
-        outline: none;
-      }
+
 
       #search-term {
         background: none;
