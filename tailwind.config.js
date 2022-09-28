@@ -21,7 +21,7 @@ module.exports = {
         },
         extend: {
             backgroundImage: {
-                'bg-img-category': "url('{{c.uploaded_background.url}}')",
+                'bg-img-category': "url('{{c.uploaded_background.url}}')"
             }
         },
         colors: {
