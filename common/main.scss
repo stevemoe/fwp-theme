@@ -44,6 +44,7 @@ $gray: #8492a6;
 $gray-light: #d3dce6;
 $black: #001725;
 $white: #fbfaf8;
+$white-60: hsla(40,27,98,0.6);
 $gray-border: #cacaca;
 
 /*
@@ -116,8 +117,7 @@ $max-width: 600px;
     padding: 0;
     border: 1px solid $gray-border;
     border-radius: 9999px;
-    background: $white;
-    opacity: 0.6;
+    background: $white-60;
     box-shadow: $shadow;
     backdrop-filter: blur(4px);
 
@@ -130,18 +130,17 @@ $max-width: 600px;
       font-style: normal;
       line-height: 1.5rem;
     }
+
+    input[type="text"]:focus {
+      border: none;
+    }
   }
 
   .search-input {
-
+width: 100%;
 
     #search-term {
       background: none;
-    }
-
-    .searching {
-      top: auto;
-      right: 2.25em;
     }
   }
 
