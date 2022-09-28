@@ -112,7 +112,7 @@ export default apiInitializer("0.8", (api) => {
 
             if (formFactor === "widget") {
                 const searchButton = this.attach("link", {
-                    title: "search_banner.search",
+                    title: "search.search_button",
                     contents: () => iconNode("search"),
                     className: "search-icon text-gray ease-in duration-300",
                     action: "showResults",
