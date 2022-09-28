@@ -283,6 +283,14 @@
   background-color: #f9d973;
 }
 
+.bg-contain{
+  background-size: contain;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
