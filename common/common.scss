@@ -585,6 +585,7 @@ $max-width: 600px;
       border: none;
       :focus-within {
         border:none;
+        outline: none;
       }
       #search-term {
         background: none;
