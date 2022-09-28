@@ -587,6 +587,9 @@ $max-width: 600px;
     .search-input {
       width: 100%;
       border: none;
+      :hover {
+        background-color: #ff49db;
+      }
       #search-term {
         background: none;
       }
