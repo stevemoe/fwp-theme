@@ -582,6 +582,7 @@ $max-width: 600px;
       border: none;
       #search-term {
         background: none;
+        width: 100%;
       }
     }
     .search-input:focus-within {
@@ -603,7 +604,9 @@ $max-width: 600px;
     visibility: hidden;
   }
   .search-icon {
-    margin: 2.25rem;
+    position: absolute;
+    z-index: 2;
+    right: 2.25em;
     .d-icon {
       color: $gray-dark;
     }
