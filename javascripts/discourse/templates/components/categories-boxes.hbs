@@ -2,7 +2,7 @@
     <PluginOutlet @name="category-box-before-each-box" @args={{hash category=c}} />
 
     <div style={{unless this.noCategoryStyle (html-safe (concat (border-color c.color) (category-color-variable c.color)))}} data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if this.noCategoryStyle "no-category-boxes-style"}}">
-        <div class="category-box-inner">
+        <div class="category-box-inner" {{#if c.uploaded_background.url}}style="background-image: url("{{c.uploaded_background.url}}")"{{/if}}>
             {{#unless c.isMuted}}
                 <div class="category-logo">
                     {{#if c.uploaded_logo.url}}
@@ -10,9 +10,6 @@
                     {{/if}}
                 </div>
             {{/unless}}
-            <svg width="265" height="274" viewBox="0 0 265 274" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.73292 171.323C-4.94563 93.9656 -8.97275 0.58609 87.8127 0.942352C184.608 1.29861 273.224 13.6715 264.093 136.072C254.953 258.473 152.324 282.468 105.411 271.693C58.4888 260.909 14.4115 248.68 4.73292 171.323Z" fill="#52B9A0"/>
-            </svg>
 
             <div class="category-details">
                 <div class="category-box-heading">
