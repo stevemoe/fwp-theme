@@ -494,7 +494,7 @@ $gray-border: #cacaca;
 Shadows--------------------------------------------------
  */
 
-$shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow: 0px, 1px, 3px, rgba(0, 0, 0, 0.1), 0px, 1px, 2px, -1px, rgba(0, 0, 0, 0.1);
 
 /*
 ---------------------------------------------------------
@@ -549,13 +549,10 @@ $max-width: 600px;
 
 .custom-search-banner-wrap {
   .search-menu {
-    position: relative;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     height: 4rem;
-    flex: 1 1 auto;
-    margin: 0;
-    padding: 0;
     border: 1px solid $gray-border;
     border-radius: 999px;
     background: $white-60;
@@ -563,7 +560,7 @@ $max-width: 600px;
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
     .searching {
-      right: 2.25rem;
+      margin-right: 2.25rem;
       a.clear-search {
         transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
         transition-duration: 50ms;
@@ -580,19 +577,16 @@ $max-width: 600px;
         }
       }
     }
-    .search-input:focus-within {
-      border:none;
-      outline: none;
-    }
     .search-input {
       width: 100%;
       border: none;
-      :hover {
-        background-color: #ff49db;
-      }
       #search-term {
         background: none;
       }
+    }
+    .search-input:focus-within {
+      border:none;
+      outline: none;
     }
     input[type="text"] {
       margin: 0;
@@ -609,9 +603,7 @@ $max-width: 600px;
     visibility: hidden;
   }
   .search-icon {
-    position: absolute;
-    z-index: 2;
-    right: 2.25em;
+    margin: 2.25rem;
     .d-icon {
       color: $gray-dark;
     }
