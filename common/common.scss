@@ -486,7 +486,7 @@ $black: #001725;
 
 $white: #fbfaf8;
 
-$white-60: hsla(40,27,98,0.6);
+$white-60: hsla(40, 27, 98, 0.6);
 
 $gray-border: #cacaca;
 
@@ -571,12 +571,13 @@ $max-width: 600px;
       font-style: normal;
       line-height: 1.5rem;
     }
-    input[type="text"]:focus {
+    input:focus-within {
       border: none;
     }
   }
   .search-input {
     width: 100%;
+    border: none;
     #search-term {
       background: none;
     }
@@ -620,7 +621,7 @@ $max-width: 600px;
     }
   }
   .search-context,
-.results {
+  .results {
     margin: 0 auto;
     max-width: $max-width;
   }
@@ -653,7 +654,7 @@ $max-width: 600px;
       width: 100%;
     }
     ul,
-  ol {
+    ol {
       list-style-type: none;
       margin: 0;
     }

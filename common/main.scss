@@ -44,7 +44,7 @@ $gray: #8492a6;
 $gray-light: #d3dce6;
 $black: #001725;
 $white: #fbfaf8;
-$white-60: hsla(40,27,98,0.6);
+$white-60: hsla(40, 27, 98, 0.6);
 $gray-border: #cacaca;
 
 /*
@@ -131,13 +131,14 @@ $max-width: 600px;
       line-height: 1.5rem;
     }
 
-    input[type="text"]:focus {
+    input:focus-within {
       border: none;
     }
   }
 
   .search-input {
-width: 100%;
+    width: 100%;
+    border: none;
 
     #search-term {
       background: none;
@@ -192,60 +193,60 @@ width: 100%;
   }
 
 
-.search-context,
-.results {
-  margin: 0 auto;
-  max-width: $max-width;
-}
-
-.search-context {
-  position: absolute;
-  z-index: 10;
-  right: 0;
-  top: 2.67em;
-  display: inline-flex;
-  align-items: center;
-
-  label {
-    margin-right: 1em;
-  }
-}
-
-.results {
-  box-sizing: border-box;
-  border-radius: 2rem;
-  background: var(--secondary);
-  box-shadow: $shadow;
-  position: absolute;
-  width: inherit;
-  z-index: 9;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  top: 2.4em;
-  right: 0;
-  padding: 0.5em;
-  @include breakpoint(mobile-extra-large) {
-    width: 100%;
+  .search-context,
+  .results {
+    margin: 0 auto;
+    max-width: $max-width;
   }
 
-  ul,
-  ol {
-    list-style-type: none;
-    margin: 0;
+  .search-context {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 2.67em;
+    display: inline-flex;
+    align-items: center;
+
+    label {
+      margin-right: 1em;
+    }
   }
-}
 
-.searching a.show-advanced-search {
-  display: none;
-}
+  .results {
+    box-sizing: border-box;
+    border-radius: 2rem;
+    background: var(--secondary);
+    box-shadow: $shadow;
+    position: absolute;
+    width: inherit;
+    z-index: 9;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: 2.4em;
+    right: 0;
+    padding: 0.5em;
+    @include breakpoint(mobile-extra-large) {
+      width: 100%;
+    }
 
-.search-link .d-icon {
-  color: var(--primary-medium);
-}
+    ul,
+    ol {
+      list-style-type: none;
+      margin: 0;
+    }
+  }
 
-span.keyword {
-  color: var(--primary);
-}
+  .searching a.show-advanced-search {
+    display: none;
+  }
+
+  .search-link .d-icon {
+    color: var(--primary-medium);
+  }
+
+  span.keyword {
+    color: var(--primary);
+  }
 
 }
