@@ -549,9 +549,18 @@ $max-width: 600px;
   .search-menu {
     position: relative;
     display: flex;
-    flex-basis: 75%;
     align-items: center;
     height: 4rem;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    border: 1px solid $gray-border;
+    border-radius: 9999px;
+    background: $white;
+    opacity: 0.6;
+    box-shadow: $shadow;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     input[type="text"] {
       margin: 0;
       width: 100%;
@@ -563,17 +572,6 @@ $max-width: 600px;
     }
   }
   .search-input {
-    height: inherit;
-    flex: 1 1 auto;
-    margin: 0;
-    padding: 0;
-    border: 1px solid $gray-border;
-    border-radius: 9999px;
-    background: $white;
-    opacity: 0.6;
-    box-shadow: $shadow;
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
     #search-term {
       background: none;
     }
