@@ -560,6 +560,7 @@ $max-width: 600px;
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
     .searching {
+      position: relative;
       margin-right: 2.25rem;
       a.clear-search {
         transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
@@ -586,7 +587,7 @@ $max-width: 600px;
       }
     }
     .search-input:focus-within {
-      border:none;
+      border: none;
       outline: none;
     }
     input[type="text"] {
