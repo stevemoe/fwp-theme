@@ -20,9 +20,6 @@ module.exports = {
             '7xl': ['5rem', '6rem']
         },
         extend: {
-            backgroundImage: {
-                'bg-img-category': "url('{{c.uploaded_background.url}}')"
-            }
         },
         colors: {
             'blue': '#8aa0bc',
