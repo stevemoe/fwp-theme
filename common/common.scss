@@ -45,7 +45,9 @@
 
 .category-boxes,
 .category-boxes-with-topics {
-  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   margin-top: 1em;
   margin-bottom: 1em;
   width: 100%;
@@ -109,7 +111,7 @@
 
 .category-boxes {
   .category-box {
-    width: 16rem;
+    min-width: 16rem;
     margin: 0 1% 1.5em 1%;
     > a {
       width: 100%;
@@ -924,13 +926,6 @@ $max-width: 600px;
   span.keyword {
     color: var(--primary);
   }
-}
-
-/*
-Category-Box--------------------------------------------------
- */
-
-.category-box-inner {
 }
 
 .hover\:bg-gray:hover{
