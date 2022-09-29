@@ -7,6 +7,7 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-boxes",
+        "getInlineSVG",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
@@ -15,7 +16,7 @@ export default Component.extend({
 
     @discourseComputed("categories.[].uploaded_background.url")
     getInlineSVG() {
-        $.get('../edggD',function(data) {
+        $.get(this.categories.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
             console.log(data);
         });
     },
