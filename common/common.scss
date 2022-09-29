@@ -45,6 +45,7 @@
 
 .category-boxes,
 .category-boxes-with-topics {
+  justify-content: center;
   margin-top: 1em;
   margin-bottom: 1em;
   width: 100%;
@@ -766,6 +767,10 @@ body {
   #main-outlet-wrapper {
     filter: opacity(65%);
   }
+}
+
+#main-container > div.row.bootstrap-mode-notice, create-topics-notice {
+  display: none;
 }
 
 /*
