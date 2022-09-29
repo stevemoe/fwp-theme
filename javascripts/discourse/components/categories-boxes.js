@@ -15,6 +15,7 @@ export default Component.extend({
     lockIcon: "lock",
 
     @discourseComputed("categories.[].uploaded_background.url")
+
     getInlineSVG() {
         $.get(this.categories.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
             console.log(data);
