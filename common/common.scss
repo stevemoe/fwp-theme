@@ -126,116 +126,110 @@
       display: none;
     }
   }
-}
-
-&.no-logos {
-  .category-box .category-box-inner > a {
-    padding: 3em 1em;
-  }
-}
-
-.description {
-  margin-bottom: 1em;
-  text-align: center;
-  font-size: $font-0;
-  color: var(--primary-med-or-secondary-high);
-  position: relative;
-  @include line-clamp(4);
-  /* allow clicks to fall through the description text to the category below...*/
-  pointer-events: none;
-  .overflow {
-    max-height: 6em;
-    div a {
-      /* ...but links in description should still be clickable */
-      pointer-events: auto;
+  &.no-logos {
+    .category-box .category-box-inner > a {
+      padding: 3em 1em;
     }
   }
-}
-
-h3 {
-  font-size: $font-up-2;
-  margin-bottom: 0.5em;
-  margin-top: 0.25em;
-  line-height: $line-height-medium;
-  text-align: center;
-  color: var(--primary);
-  overflow: hidden;
-}
-
-h4 a {
-  color: var(--primary);
-}
-
-.subcategory.with-subcategories {
-  position: relative;
-  border: none;
-  border-left-width: 4px;
-  border-left-style: solid;
-  margin-bottom: 0.25em;
-  .category-title-link {
-    display: flex;
-    .category-logo {
-      flex: 1 0 auto;
-      margin: 0.25em 0.5em 0.5em 0;
-      --max-height: 40px;
-    }
-    .category-text-title {
-      order: 2;
-      line-height: $line-height-medium;
-      overflow: hidden;
-      margin-bottom: 0.25em;
-      word-wrap: break-word;
-    }
-    &:before {
-      /* This avoids an issue with nested links by layering links instead */
-      content: "";
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+  .description {
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: $font-0;
+    color: var(--primary-med-or-secondary-high);
+    position: relative;
+    @include line-clamp(4);
+    /* allow clicks to fall through the description text to the category below...*/
+    pointer-events: none;
+    .overflow {
+      max-height: 6em;
+      div a {
+        /* ...but links in description should still be clickable */
+        pointer-events: auto;
+      }
     }
   }
-  .subcategory-box-inner {
-    border: 1px solid var(--primary-low);
-    border-left: none;
-    padding: 0.5em 0.5em 0.4em 0.5em;
+  h3 {
+    font-size: $font-up-2;
+    margin-bottom: 0.5em;
+    margin-top: 0.25em;
+    line-height: $line-height-medium;
+    text-align: center;
+    color: var(--primary);
+    overflow: hidden;
   }
-  &:not(:last-of-type) {
-    margin-bottom: 0.75em;
+  h4 a {
+    color: var(--primary);
   }
-  .subcategory {
+  .subcategory.with-subcategories {
+    position: relative;
+    border: none;
+    border-left-width: 4px;
+    border-left-style: solid;
     margin-bottom: 0.25em;
+    .category-title-link {
+      display: flex;
+      .category-logo {
+        flex: 1 0 auto;
+        margin: 0.25em 0.5em 0.5em 0;
+        --max-height: 40px;
+      }
+      .category-text-title {
+        order: 2;
+        line-height: $line-height-medium;
+        overflow: hidden;
+        margin-bottom: 0.25em;
+        word-wrap: break-word;
+      }
+      &:before {
+        /* This avoids an issue with nested links by layering links instead */
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .subcategory-box-inner {
+      border: 1px solid var(--primary-low);
+      border-left: none;
+      padding: 0.5em 0.5em 0.4em 0.5em;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 0.75em;
+    }
+    .subcategory {
+      margin-bottom: 0.25em;
+    }
   }
-}
-
-.subcategories {
-  display: flex;
-  flex-flow: wrap;
-  .subcategory {
+  .subcategories {
     display: flex;
-    align-items: center;
-    @include ellipsis;
-    margin-bottom: 0.6em;
-    .badge-wrapper {
-      overflow: hidden;
-    }
-    .subcategory-image-placeholder {
-      display: inline-block;
-      margin-right: 0.6em;
-      flex: 1 0 auto;
-    }
-    .subcategory-link {
-      min-width: 0;
+    flex-flow: wrap;
+    .subcategory {
+      display: flex;
+      align-items: center;
       @include ellipsis;
-    }
-    .logo img {
-      display: inline-block;
-      --height: 20px;
-      height: var(--height);
-      width: calc(var(--height) * var(--aspect-ratio));
-      margin: 0;
+      margin-bottom: 0.6em;
+      .badge-wrapper {
+        overflow: hidden;
+      }
+      .subcategory-image-placeholder {
+        display: inline-block;
+        margin-right: 0.6em;
+        flex: 1 0 auto;
+      }
+      .subcategory-link {
+        min-width: 0;
+        @include ellipsis;
+      }
+      .logo img {
+        display: inline-block;
+        --height: 20px;
+        height: var(--height);
+        width: calc(var(--height) * var(--aspect-ratio));
+        margin: 0;
+      }
     }
   }
 }
