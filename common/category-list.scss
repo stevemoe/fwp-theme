@@ -74,7 +74,7 @@
 
       .category-logo {
         float: none;
-        margin: 0;
+        margin: 0 0 0 1rem;
       }
     }
 
@@ -99,7 +99,7 @@
       display: block;
       width: auto;
       height: auto;
-      margin: 0 auto 1em auto;
+      margin: 0;
     }
 
     @supports (--custom: property) {
@@ -118,6 +118,7 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     border: none;
   }
 
@@ -153,11 +154,12 @@
   }
 
   h3 {
+    font-family: Explorer;
     font-size: $font-up-5;
     margin-bottom: 0.5em;
     margin-top: 0.25em;
     line-height: $line-height-medium;
-    text-align: center;
+    text-align: start;
     color: var(--primary);
     overflow: hidden;
   }
