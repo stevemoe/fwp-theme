@@ -55,6 +55,8 @@
   width: 100%;
 
   .category-box {
+    flex-basis: 16rem;
+    flex: none;
     position: relative;
     display: flex;
     flex-direction: row;
