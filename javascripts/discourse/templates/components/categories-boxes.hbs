@@ -1,6 +1,3 @@
-<script type="text/x-handlebars" data-template-name="javascripts/components/categories-boxes">
-
-
 {{#each this.categories as |c|}}
     <PluginOutlet @name="category-box-before-each-box" @args={{hash category=c}} />
 
@@ -38,4 +35,3 @@
 {{/each}}
 
 <PluginOutlet @name="category-boxes-after-boxes" @args={{hash category=this.c}} />
-</script>
