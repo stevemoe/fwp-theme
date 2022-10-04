@@ -4,7 +4,7 @@ import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
 console.log("test categories-boxes-test.js");
-console.log($);
+console.log($(this.URL));
 
 export default Component.extend({
     tagName: "section",
