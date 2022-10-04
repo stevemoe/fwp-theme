@@ -16,12 +16,13 @@ export default Component.extend({
 
     @discourseComputed("categories.[].uploaded_background.url")
 
-    getInlineSVG() {
-        $.get(this.categories.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
-            console.log(data);
-        });
-    },
+    // getInlineSVG() {
+    //     $.get(this.categories.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
+    //         console.log(data);
+    //     });
+    // },
 
+        console.log("test"),
 
     @discourseComputed("categories.[].uploaded_logo.url")
     anyLogos() {
