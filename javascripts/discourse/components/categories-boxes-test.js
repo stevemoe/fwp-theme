@@ -6,8 +6,7 @@ import { isEmpty } from "@ember/utils";
 
 console.log("test categories-boxes-test.js");
 console.log(Discourse);
-const user = api.getCurrentUser();
-console.log(user);
+
 
 export default Component.extend({
     tagName: "section",
