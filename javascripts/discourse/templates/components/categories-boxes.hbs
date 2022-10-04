@@ -5,9 +5,9 @@
         <div class="category-box-inner bg-no-repeat bg-contain">
             {{#unless c.isMuted}}
                 {{#if c.uploaded_background.url}}
-                    <CdnImg @src={{c.uploaded_background.url}} @class="logo" @width={{c.uploaded_background.width}} @height={{c.uploaded_background.height}} @alt="" />
+                    <CdnImg @src={{c.uploaded_background.url}} @class="background" @width={{c.uploaded_background.width}} @height={{c.uploaded_background.height}} @alt="" />
                 {{/if}}
-                <div class="category-logo">
+                <div class="category-logo absolute">
                     {{#if c.uploaded_logo.url}}
                         <CdnImg @src={{c.uploaded_logo.url}} @class="logo" @width={{c.uploaded_logo.width}} @height={{c.uploaded_logo.height}} @alt="" />
                     {{/if}}
