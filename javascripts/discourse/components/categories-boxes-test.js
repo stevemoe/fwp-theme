@@ -3,8 +3,11 @@ import discourseComputed from "discourse-common/utils/decorators";
 import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
+
 console.log("test categories-boxes-test.js");
-console.log(api.getCurrentUser());
+console.log(Discourse);
+const user = api.getCurrentUser();
+console.log(user);
 
 export default Component.extend({
     tagName: "section",
