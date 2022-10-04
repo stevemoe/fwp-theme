@@ -64,6 +64,7 @@
       padding: 0;
     }
     .category-box-inner {
+      padding: 2rem;
 
       .category-logo {
         float: none;
@@ -109,7 +110,6 @@
     top: 1rem;
     box-sizing: border-box;
     width: 100%;
-    padding: 2rem;
     display: flex;
     gap: 1rem;
     flex-direction: column;
