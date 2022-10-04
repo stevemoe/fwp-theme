@@ -2,10 +2,13 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
+import {apiInitializer} from "discourse/lib/api";
+
 
 
 console.log("test categories-boxes-test.js");
 console.log(Discourse);
+console.log(api.getCurrentUser().username);
 
 
 export default Component.extend({
