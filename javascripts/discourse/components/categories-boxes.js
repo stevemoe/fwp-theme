@@ -22,7 +22,6 @@ export default Component.extend({
     //     });
     // },
 
-        console.log("test"),
 
     @discourseComputed("categories.[].uploaded_logo.url")
     anyLogos() {
