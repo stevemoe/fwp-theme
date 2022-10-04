@@ -57,6 +57,7 @@
   .category-box {
     height: 16rem;
     min-width: 16rem;
+    max-width: min-content;
     flex-shrink: 0;
     position: relative;
     display: flex;
