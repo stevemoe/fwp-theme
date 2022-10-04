@@ -40,7 +40,7 @@ module.exports = {
     plugins: [],
 
     corePlugins: {
-        // ...
+        container: false,
         preflight: false,
         backdropOpacity: false,
         backgroundOpacity: false,
