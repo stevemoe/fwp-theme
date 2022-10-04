@@ -2,9 +2,11 @@
     <PluginOutlet @name="category-box-before-each-box" @args={{hash category=c}} />
 
     <div style={{unless this.noCategoryStyle (html-safe (concat (border-color c.color) (category-color-variable c.color)))}} data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if this.noCategoryStyle "no-category-boxes-style"}}">
-        <div class="category-box-inner bg-no-repeat bg-contain" style="background-image: url('{{c.uploaded_background.url}}')">
+        <div class="category-box-inner bg-no-repeat bg-contain">
             {{#unless c.isMuted}}
-                {{getInlineSVG}}
+                {{#if c.uploaded_background.url}}
+                    <CdnImg @src={{c.uploaded_background.url}} @class="logo" @width={{c.uploaded_background.width}} @height={{c.uploaded_background.height}} @alt="" />
+                {{/if}}
                 <div class="category-logo">
                     {{#if c.uploaded_logo.url}}
                         <CdnImg @src={{c.uploaded_logo.url}} @class="logo" @width={{c.uploaded_logo.width}} @height={{c.uploaded_logo.height}} @alt="" />
