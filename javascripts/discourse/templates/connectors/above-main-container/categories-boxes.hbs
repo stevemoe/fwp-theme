@@ -1,2 +1,5 @@
 {{categories-boxes-test}}
-<p>Hello{{this.categories}}</p>
+{{#each this.categories as |c|}}
+
+    <p>Hello {{c}}</p>
+{{/each}}
