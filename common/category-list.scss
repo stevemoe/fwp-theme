@@ -55,8 +55,7 @@
   width: 100%;
 
   .category-box {
-    max-width: min-content;
-    flex-shrink: 0;
+    width: auto;
     box-sizing: border-box;
     border: none;
     margin: 0 1% 1.5em 1%;
