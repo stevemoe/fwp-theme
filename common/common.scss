@@ -56,15 +56,9 @@
   margin-bottom: 1em;
   width: 100%;
   .category-box {
-    height: 16rem;
-    min-width: 16rem;
     max-width: -moz-min-content;
     max-width: min-content;
     flex-shrink: 0;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
     box-sizing: border-box;
     border: none;
     margin: 0 1% 1.5em 1%;
@@ -73,7 +67,7 @@
       padding: 0;
     }
     .category-box-inner {
-      padding: 1em;
+      padding: 2em;
       .category-logo {
         float: none;
         margin: 0 0 0 1rem;
