@@ -11,6 +11,7 @@ export default apiInitializer("0.8", (api) => {
 
         html() {
             let user = api.getCurrentUser();
+            console.log(user);
 
             return "categories" + user;
         }
