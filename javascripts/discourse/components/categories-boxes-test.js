@@ -3,7 +3,15 @@ import discourseComputed from "discourse-common/utils/decorators";
 import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
+const ajax = require('discourse/lib/ajax').ajax;
 
+ajax("/site.json").then (function(result){ // Get list of categories
+    let categoryName = [];
+    result.categories.forEach(function(categories){
+        categoryName.push(categories);
+    });
+    console.log(categoryName);
+});
 
 console.log("test categories-boxes-test.js");
 console.log(Discourse);
