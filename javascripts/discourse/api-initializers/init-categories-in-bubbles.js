@@ -19,7 +19,7 @@ export default apiInitializer("0.8", (api) => {
                         categoryName.push(categories);
                     });
                     let svg = $.get(categoryName[0].uploaded_background.url, function (data) {
-                        $(".resultSVG").html(data);
+                        $.html(data);
                     });
                     console.log(svg);
                 });
