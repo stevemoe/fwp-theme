@@ -22,9 +22,13 @@ export default apiInitializer("0.8", (api) => {
                     });
                     $.get(categoryName[0].uploaded_background.url, function (data) {
                         svg = data;
+                        console.log("get")
                         console.log(svg)
                     });
+                    console.log("ajax:");
+                    console.log(svg);
                 });
+                console.log("getInlineSVG");
                 console.log(svg);
                 return (svg);
             };
