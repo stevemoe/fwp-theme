@@ -26,7 +26,7 @@ export default apiInitializer("0.8", (api) => {
                 });
 
             });}
-            console.log(getInlineSVG());
+            console.log("getSVG" + getInlineSVG());
             return getInlineSVG();
         }
     });
