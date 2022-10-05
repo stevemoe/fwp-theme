@@ -13,13 +13,14 @@ export default apiInitializer("0.8", (api) => {
         html() {
 
             function getInlineSVG() {
+
                 ajax("/site.json").then(function (result) { // Get list of categories
                     let categoryName = [];
                     result.categories.forEach(function (categories) {
                         categoryName.push(categories);
                     });
                     let svg = $.get(categoryName[0].uploaded_background.url, function (data) {
-                        $.html(data);
+                        $('div').append(data);
                     });
                     console.log(data);
                 });
