@@ -2,7 +2,6 @@ import {createWidget} from 'discourse/widgets/widget';
 import {apiInitializer} from "discourse/lib/api";
 
 
-
 export default apiInitializer("0.8", (api) => {
 
     const ajax = require('discourse/lib/ajax').ajax;
@@ -14,18 +13,18 @@ export default apiInitializer("0.8", (api) => {
         html() {
 
             function getInlineSVG() {
-                ajax("/site.json").then (function(result){ // Get list of categories
-                let categoryName = [];
-                result.categories.forEach(function(categories){
-                    categoryName.push(categories);
+                ajax("/site.json").then(function (result) { // Get list of categories
+                    let categoryName = [];
+                    result.categories.forEach(function (categories) {
+                        categoryName.push(categories);
+                    });
+                    let svg = $.get(categoryName[0].uploaded_background.url, function (data) {
+                        $(".resultSVG").html(data);
+                    });
+                    console.log(svg);
                 });
-                console.log(categoryName[0].uploaded_background.url);
-                let svg = $.get(categoryName[0].uploaded_background.url, function (data) {
-                    $(".resultSVG").html(data);
-                });
-console.log(svg);
-            });}
-            console.log("getSVG" + getInlineSVG());
+            };
+
             return getInlineSVG();
         }
     });
