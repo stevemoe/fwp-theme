@@ -11,7 +11,7 @@ ajax("/site.json").then (function(result){ // Get list of categories
         categoryName.push(categories);
     });
     console.log(categoryName);
-    let svg = $.get(this.categoryName[0].get("uploaded_background.url"));
+    let svg = $.get(categoryName[0].get("uploaded_background.url"));
         console.log(svg);
 
 
