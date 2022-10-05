@@ -20,11 +20,10 @@ export default apiInitializer("0.8", (api) => {
                     categoryName.push(categories);
                 });
                 console.log(categoryName[0].uploaded_background.url);
-                $.get(categoryName[0].uploaded_background.url, function (data) {
-                    console.log(data);
+                let svg = $.get(categoryName[0].uploaded_background.url, function (data) {
                     return data;
                 });
-
+console.log(svg);
             });}
             console.log("getSVG" + getInlineSVG());
             return getInlineSVG();
