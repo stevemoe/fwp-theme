@@ -31,6 +31,8 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
+
+
     // @discourseComputed("categories.[].uploaded_background.url")
     //
     // getInlineSVG() {

@@ -5,15 +5,38 @@ import {apiInitializer} from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
 
+    const ajax = require('discourse/lib/ajax').ajax;
+
+    ajax("/site.json").then (function(result){ // Get list of categories
+        let categoryName = [];
+        result.categories.forEach(function(categories){
+            categoryName.push(categories);
+        });
+        console.log(categoryName);
+        let svg = $.get(categoryName[0].uploaded_background.url);
+        console.log(svg);
+
+
+    });
+
     createWidget('categories-in-bubbles', {
         tagName: "div.categories-in-bubbles",
 
 
-        html() {
-            let user = api.getCurrentUser();
-            console.log(user);
 
-            return "categories" + user.username;
+
+        html() {
+
+            ajax("/site.json").then (function(result){ // Get list of categories
+                let categoryName = [];
+                result.categories.forEach(function(categories){
+                    categoryName.push(categories);
+                });
+                console.log(categoryName);
+                let svg = $.get(categoryName[0].uploaded_background.url);
+                console.log(svg.responseXML);
+                return svg.responseXML;
+            });
         }
     });
 
