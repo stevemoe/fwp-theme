@@ -14,7 +14,6 @@ ajax("/site.json").then (function(result){ // Get list of categories
 });
 
 console.log("test categories-boxes-test.js");
-console.log(currentUser);
 
 
 export default Component.extend({
