@@ -32,10 +32,10 @@ export default apiInitializer("0.8", (api) => {
                 result.categories.forEach(function(categories){
                     categoryName.push(categories);
                 });
-                console.log(categoryName);
+                console.log(categoryName[0].uploaded_background.url);
                 let svg = $.get(categoryName[0].uploaded_background.url);
-                console.log(svg.responseXML);
-                return svg.responseXML;
+                console.log(svg.responseText);
+                return svg.responseText;
             });
         }
     });

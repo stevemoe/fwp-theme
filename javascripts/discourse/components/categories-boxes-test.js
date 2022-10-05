@@ -3,19 +3,19 @@ import discourseComputed from "discourse-common/utils/decorators";
 import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
-const ajax = require('discourse/lib/ajax').ajax;
-
-ajax("/site.json").then (function(result){ // Get list of categories
-    let categoryName = [];
-    result.categories.forEach(function(categories){
-        categoryName.push(categories);
-    });
-    console.log(categoryName);
-    let svg = $.get(categoryName[0].uploaded_background.url);
-        console.log(svg);
-
-
-});
+// const ajax = require('discourse/lib/ajax').ajax;
+//
+// ajax("/site.json").then (function(result){ // Get list of categories
+//     let categoryName = [];
+//     result.categories.forEach(function(categories){
+//         categoryName.push(categories);
+//     });
+//     console.log(categoryName);
+//     let svg = $.get(categoryName[0].uploaded_background.url);
+//         console.log(svg);
+//
+//
+// });
 
 console.log("test categories-boxes-test.js");
 
