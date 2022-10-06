@@ -4,6 +4,7 @@ import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
 
+
 export default Component.extend({
     tagName: "section",
     classNameBindings: [
@@ -15,14 +16,13 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-
-    @discourseComputed("currentUser")
-    console(user) {
-
-        console.log(user.admin);
-        console.log(this.categories);
-        return user.admin;
+    @discourseComputed("categories.[].uploaded_logo.url")
+    anyLogos() {
+        console.log(this)
+        return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
     },
+
+
     // @discourseComputed("categories.[].uploaded_background.url")
     //
     // getInlineSVG() {
