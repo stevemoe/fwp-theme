@@ -16,7 +16,7 @@ export default Component.extend({
     lockIcon: "lock",
 
 
-    @discourseComputed("categoryList")
+    @discourseComputed("currentUser")
     console(categories) {
 
         console.log(categories);
