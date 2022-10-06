@@ -5,7 +5,7 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        "console",
+        "initialize",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
