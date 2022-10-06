@@ -1,6 +1,5 @@
 
 
-{{#each this.categories as |c|}}
     <PluginOutlet @name="category-box-before-each-box" @args={{hash category=c}} />
 
     <div data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if this.noCategoryStyle "no-category-boxes-style"}} relative drop-shadow">
@@ -36,7 +35,6 @@
     </div>
 
     <PluginOutlet @name="category-box-after-each-box" @args={{hash category=c}} />
-{{/each}}
 
 <PluginOutlet @name="category-boxes-after-boxes" @args={{hash category=this.c}} />
 
