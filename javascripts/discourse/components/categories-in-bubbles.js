@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import {equal} from "@ember/object/computed";
 import {isEmpty} from "@ember/utils";
-import "../templates/components/categories-in-bubbles"
+import layout from "templates/components/categories-in-bubbles"
 
 
 export default Component.extend({
