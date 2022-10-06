@@ -14,37 +14,37 @@ export default Component.extend({
 
 
 
-    initialize() {
-        withPluginApi("0.8.7", api => {
-            const ajax = require('discourse/lib/ajax').ajax;
-
-            api.registerConnectorClass('below-site-header', 'custom-homepage', {
-                setupComponent(args, component) {
-                    component.set('hostname', window.location.hostname);
-
-                    api.onPageChange((url, title) => {
-                        if (url == "/" || url == "/latest") {
-                            $('html').addClass('show-custom-homepage'); // Show homepage
-                            component.set('displayCustomHomepage', true);
-
-                            ajax("/site.json").then(function (result) { // Get list of categories
-                                let categoryName = [];
-                                result.categories.forEach(function (categories) {
-                                    categoryName.push(categories);
-                                });
-                                console.log(categoryName);
-                                component.set('categoryName', categoryName);
-                            });
-                        } else { // Hide homepage
-                            $('html').removeClass('show-custom-homepage');
-                            component.set('displayCustomHomepage', false);
-                        }
-                    });
-                }
-            });
-        });
-        return withPluginApi;
-    },
+    // initialize() {
+    //     withPluginApi("0.8.7", api => {
+    //         const ajax = require('discourse/lib/ajax').ajax;
+    //
+    //         api.registerConnectorClass('below-site-header', 'custom-homepage', {
+    //             setupComponent(args, component) {
+    //                 component.set('hostname', window.location.hostname);
+    //
+    //                 api.onPageChange((url, title) => {
+    //                     if (url == "/" || url == "/latest") {
+    //                         $('html').addClass('show-custom-homepage'); // Show homepage
+    //                         component.set('displayCustomHomepage', true);
+    //
+    //                         ajax("/site.json").then(function (result) { // Get list of categories
+    //                             let categoryName = [];
+    //                             result.categories.forEach(function (categories) {
+    //                                 categoryName.push(categories);
+    //                             });
+    //                             console.log(categoryName);
+    //                             component.set('categoryName', categoryName);
+    //                         });
+    //                     } else { // Hide homepage
+    //                         $('html').removeClass('show-custom-homepage');
+    //                         component.set('displayCustomHomepage', false);
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     });
+    //     return withPluginApi;
+    // },
 
 
     // @discourseComputed("categories.[].uploaded_background.url")
