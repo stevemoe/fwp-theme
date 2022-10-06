@@ -5,7 +5,7 @@ import {isEmpty} from "@ember/utils";
 
 
 export default Component.extend({
-    tagName: "section",
+    tagName: "h1",
     classNameBindings: [
         ":category-bubbles",
         "getInlineSVG",

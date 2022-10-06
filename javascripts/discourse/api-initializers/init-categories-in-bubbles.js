@@ -12,7 +12,7 @@ export default apiInitializer("0.8", (api) => {
 
         html() {
 
-            return("categories in bubbles");
+            return("categories in bubbles widget");
         }
     });
 
