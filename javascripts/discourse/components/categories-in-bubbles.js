@@ -12,13 +12,7 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-    @discourseComputed("categories.[]")
-    anyLogos(categories) {
-        categories.forEach((category) => {
-            console.log(category);
 
-        });
-    },
 
     initialize() {
         withPluginApi("0.8.7", api => {
