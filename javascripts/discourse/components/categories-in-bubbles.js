@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import {equal} from "@ember/object/computed";
 import {isEmpty} from "@ember/utils";
-import layout from "../templates/components/categories-boxes.hbs"
+import layout from "../templates/components/categories-in-bubbles.hbs"
 
 
 export default Component.extend({
@@ -15,25 +15,18 @@ export default Component.extend({
     ],
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
-    layout
+    layout,
 
 
-    // @discourseComputed("categories.[].uploaded_background.url")
-    //
-    // getInlineSVG() {
-    //     $.get(this.categoryName.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
-    //         console.log(data);
-    //     });
-    // },
-    //
-    //
-    // @discourseComputed("categories.[].uploaded_logo.url")
-    // anyLogos() {
-    //     return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
-    // },
-    //
-    // @discourseComputed("categories.[].subcategories")
-    // hasSubcategories() {
-    //     return this.categories.any((c) => !isEmpty(c.get("subcategories")));
-    // },
+
+
+    @discourseComputed("categories.[].uploaded_logo.url")
+    anyLogos() {
+        return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
+    },
+
+    @discourseComputed("categories.[].subcategories")
+    hasSubcategories() {
+        return this.categories.any((c) => !isEmpty(c.get("subcategories")));
+    },
 });
