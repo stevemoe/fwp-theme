@@ -3,8 +3,6 @@ import discourseComputed from "discourse-common/utils/decorators";
 import { equal } from "@ember/object/computed";
 import { isEmpty } from "@ember/utils";
 
-@discourseComputed("categories.[].uploaded_logo.url")
-console.log(this.categories);
 
 export default Component.extend({
     tagName: "section",
