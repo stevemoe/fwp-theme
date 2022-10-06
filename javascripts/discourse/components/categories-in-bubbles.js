@@ -16,9 +16,9 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-    @discourseComputed("categories.[].uploaded_logo.url")
-    anyLogos(url) {
-        console.log(url);
+    @discourseComputed("categories.[]")
+    anyLogos(categories) {
+        console.log(categories)
     },
 
 
