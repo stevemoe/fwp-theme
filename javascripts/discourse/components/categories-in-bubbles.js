@@ -20,7 +20,7 @@ export default Component.extend({
     console(user) {
 
         console.log(user.admin);
-        console.log(this.admin);
+        console.log(this.categories);
     },
     // @discourseComputed("categories.[].uploaded_background.url")
     //
