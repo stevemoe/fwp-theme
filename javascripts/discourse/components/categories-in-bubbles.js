@@ -17,14 +17,14 @@ export default Component.extend({
 
 
 
-
-    @discourseComputed("categories.[].uploaded_logo.url")
-    anyLogos() {
-        return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
-    },
-
-    @discourseComputed("categories.[].subcategories")
-    hasSubcategories() {
-        return this.categories.any((c) => !isEmpty(c.get("subcategories")));
-    },
+    //
+    // @discourseComputed("categories.[].uploaded_logo.url")
+    // anyLogos() {
+    //     return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
+    // },
+    //
+    // @discourseComputed("categories.[].subcategories")
+    // hasSubcategories() {
+    //     return this.categories.any((c) => !isEmpty(c.get("subcategories")));
+    // },
 });
