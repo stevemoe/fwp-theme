@@ -14,7 +14,6 @@ export default Component.extend({
     ],
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
-    layout,
 
 
 
