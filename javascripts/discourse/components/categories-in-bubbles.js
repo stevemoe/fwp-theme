@@ -1,36 +1,21 @@
 import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
-import { equal } from "@ember/object/computed";
-import { isEmpty } from "@ember/utils";
-
-// const ajax = require('discourse/lib/ajax').ajax;
-//
-// ajax("/site.json").then (function(result){ // Get list of categories
-//     let categoryName = [];
-//     result.categories.forEach(function(categories){
-//         categoryName.push(categories);
-//     });
-//     console.log(categoryName);
-//     let svg = $.get(categoryName[0].uploaded_background.url);
-//         console.log(svg);
-//
-//
-// });
-
-console.log("test categories-boxes-test.js");
+import {equal} from "@ember/object/computed";
+import {isEmpty} from "@ember/utils";
+import layout from "../javascripts/discourse/templates/components/categories-boxes.hbs"
 
 
 export default Component.extend({
     tagName: "section",
     classNameBindings: [
-        ":category-boxes",
+        ":category-bubbles",
         "getInlineSVG",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
-
+    layout
 
 
     // @discourseComputed("categories.[].uploaded_background.url")
