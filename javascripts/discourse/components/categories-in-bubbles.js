@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import {equal} from "@ember/object/computed";
 import {isEmpty} from "@ember/utils";
-import layout from "../javascripts/discourse/templates/components/categories-boxes"
+import layout from "../templates/components/categories-boxes"
 
 
 export default Component.extend({
