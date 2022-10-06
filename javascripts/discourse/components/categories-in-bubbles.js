@@ -1,8 +1,5 @@
 import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
-import {equal} from "@ember/object/computed";
-import {isEmpty} from "@ember/utils";
-
 
 export default Component.extend({
     tagName: "section",
@@ -20,6 +17,37 @@ export default Component.extend({
         categories.forEach((category) => {
             console.log(category);
 
+        });
+    },
+
+    initialize() {
+        withPluginApi("0.8.7", api => {
+            const ajax = require('discourse/lib/ajax').ajax;
+
+            api.registerConnectorClass('below-site-header', 'custom-homepage', {
+                setupComponent(args, component) {
+                    component.set('hostname', window.location.hostname);
+
+                    api.onPageChange((url, title) => {
+                        if (url == "/" || url == "/latest") {
+                            $('html').addClass('show-custom-homepage'); // Show homepage
+                            component.set('displayCustomHomepage', true);
+
+                            ajax("/site.json").then(function (result) { // Get list of categories
+                                let categoryName = [];
+                                result.categories.forEach(function (categories) {
+                                    categoryName.push(categories);
+                                });
+                                console.log(categoryName);
+                                component.set('categoryName', categoryName);
+                            });
+                        } else { // Hide homepage
+                            $('html').removeClass('show-custom-homepage');
+                            component.set('displayCustomHomepage', false);
+                        }
+                    });
+                }
+            });
         });
     },
 
@@ -43,3 +71,8 @@ export default Component.extend({
     //     return this.categories.any((c) => !isEmpty(c.get("subcategories")));
     // },
 });
+import {equal} from "@ember/object/computed";
+import {isEmpty} from "@ember/utils";
+
+
+import {withPluginApi} from "discourse/lib/plugin-api";
