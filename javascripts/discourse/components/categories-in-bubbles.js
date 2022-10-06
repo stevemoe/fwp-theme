@@ -18,8 +18,7 @@ export default Component.extend({
 
     @discourseComputed("categories.[].uploaded_logo.url")
     anyLogos() {
-        console.log(this)
-        return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
+        console.log(this);
     },
 
 
