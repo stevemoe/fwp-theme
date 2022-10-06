@@ -1,1 +1,42 @@
-{{mount-widget widget="categories-in-bubbles"}}
+
+
+{{#each this.categories as |c|}}
+    <PluginOutlet @name="category-box-before-each-box" @args={{hash category=c}} />
+
+    <div data-category-id={{c.id}} data-notification-level={{c.notificationLevelString}} data-url={{c.url}} class="category category-box category-box-{{c.slug}} {{if c.isMuted "muted"}} {{if this.noCategoryStyle "no-category-boxes-style"}} relative drop-shadow">
+        {{#if c.uploaded_background.url}}
+            <CdnImg @src={{c.uploaded_background.url}} @class="background" @width={{c.uploaded_background.width}} @height={{c.uploaded_background.height}} @alt="" />
+        {{/if}}
+        <div class="category-box-inner bg-no-repeat bg-contain absolute">
+            {{#unless c.isMuted}}
+                <div class="category-logo">
+                    {{#if c.uploaded_logo.url}}
+                        <CdnImg @src={{c.uploaded_logo.url}} @class="logo" @width={{c.uploaded_logo.width}} @height={{c.uploaded_logo.height}} @alt="" />
+                    {{/if}}
+                </div>
+            {{/unless}}
+
+            <div class="category-details">
+                <div class="category-box-heading">
+                    <a class="parent-box-link" href={{c.url}}>
+                        <h3>
+                            <CategoryTitleBefore @category={{c}} />
+                            {{#if c.read_restricted}}
+                                {{d-icon this.lockIcon}}
+                            {{/if}}
+                            {{c.name}}
+                        </h3>
+                    </a>
+                </div>
+
+            </div>
+
+            <PluginOutlet @name="category-box-below-each-category" @args={{hash category=c}} />
+        </div>
+    </div>
+
+    <PluginOutlet @name="category-box-after-each-box" @args={{hash category=c}} />
+{{/each}}
+
+<PluginOutlet @name="category-boxes-after-boxes" @args={{hash category=this.c}} />
+
