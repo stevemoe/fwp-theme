@@ -21,6 +21,7 @@ export default Component.extend({
 
         console.log(user.admin);
         console.log(this.categories);
+        return user.admin;
     },
     // @discourseComputed("categories.[].uploaded_background.url")
     //
