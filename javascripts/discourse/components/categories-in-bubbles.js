@@ -1,8 +1,7 @@
 import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
-import { equal } from "@ember/object/computed";
-import { isEmpty } from "@ember/utils";
-
+import {equal} from "@ember/object/computed";
+import {isEmpty} from "@ember/utils";
 
 
 export default Component.extend({
@@ -18,7 +17,10 @@ export default Component.extend({
 
     @discourseComputed("categories.[]")
     anyLogos(categories) {
-        console.log(categories)
+        categories.forEach((category) => {
+            console.log(category);
+
+        });
     },
 
 
