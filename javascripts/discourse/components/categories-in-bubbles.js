@@ -16,7 +16,7 @@ export default Component.extend({
     lockIcon: "lock",
 
 
-    @discourseComputed("categories.[].uploaded_logo.url")
+    @discourseComputed("categories")
     console(categories) {
 
         console.log(categories);
