@@ -19,7 +19,7 @@ export default Component.extend({
     @discourseComputed("categories.[].uploaded_logo.url")
     console() {
 
-        console.log(this.categories);
+        console.log(this);
     },
     // @discourseComputed("categories.[].uploaded_background.url")
     //
