@@ -10,8 +10,8 @@ export default apiInitializer("0.8", (api) => {
         tagName: "div.categories-in-bubbles",
 
 
-        html(attrs) {
-console.log(attrs);
+        html(c) {
+console.log(c);
             return("attrs");
         }
     });
