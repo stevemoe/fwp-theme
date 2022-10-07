@@ -21,7 +21,7 @@ export default apiInitializer("0.8", (api) => {
                 categories.push(categoryName);
             });
             console.log(categories);
-            return (categories);
+            return (categories[0]);
         }
     });
 
