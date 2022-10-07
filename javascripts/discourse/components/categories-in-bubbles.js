@@ -1,5 +1,8 @@
 import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
+import {equal} from "@ember/object/computed";
+import {isEmpty} from "@ember/utils";
+import {withPluginApi} from "discourse/lib/plugin-api";
 
 export default Component.extend({
     tagName: "section",
@@ -66,8 +69,4 @@ export default Component.extend({
     //     return this.categories.any((c) => !isEmpty(c.get("subcategories")));
     // },
 });
-import {equal} from "@ember/object/computed";
-import {isEmpty} from "@ember/utils";
 
-
-import {withPluginApi} from "discourse/lib/plugin-api";
