@@ -15,13 +15,12 @@ export default apiInitializer("0.8", (api) => {
             ajax("/site.json").then(function (result) { // Get list of categories
                 let categoryName = [];
                 result.categories.forEach(function (categories) {
-                    categoryName.push(categories);
+                    categories.push(categories);
                 });
                 console.log(categoryName);
-                categories.push(categoryName);
             });
             console.log(categories);
-            return (categories[0]);
+            return (categories);
         }
     });
 
