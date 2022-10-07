@@ -11,14 +11,14 @@ export default apiInitializer("0.8", (api) => {
 
         html() {
             const ajax = require('discourse/lib/ajax').ajax;
-            let categories;
+            let categories =[];
             ajax("/site.json").then(function (result) { // Get list of categories
                 let categoryName = [];
                 result.categories.forEach(function (categories) {
                     categoryName.push(categories);
                 });
                 console.log(categoryName);
-                categories = categoryName;
+                categories.push(categoryName);
             });
             console.log(categories);
             return (categories);
