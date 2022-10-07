@@ -9,7 +9,7 @@ export default apiInitializer("0.8", (api) => {
         tagName: "div.categories-in-bubbles",
 
 
-        html(c) {
+        html() {
             const ajax = require('discourse/lib/ajax').ajax;
             let categories;
             ajax("/site.json").then(function (result) { // Get list of categories
@@ -20,7 +20,7 @@ export default apiInitializer("0.8", (api) => {
                 console.log(categoryName);
                 categories = categoryName;
             });
-            console.log(c);
+            console.log(categories);
             return (categories);
         }
     });
