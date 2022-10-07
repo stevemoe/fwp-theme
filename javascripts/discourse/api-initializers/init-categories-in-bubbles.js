@@ -11,17 +11,17 @@ export default apiInitializer("0.8", (api) => {
 
         html(c) {
             const ajax = require('discourse/lib/ajax').ajax;
-
+            let categories;
             ajax("/site.json").then(function (result) { // Get list of categories
                 let categoryName = [];
                 result.categories.forEach(function (categories) {
                     categoryName.push(categories);
                 });
                 console.log(categoryName);
-
+                categories = categoryName;
             });
             console.log(c);
-            return ("attrs");
+            return (categories);
         }
     });
 
