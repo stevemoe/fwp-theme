@@ -19,7 +19,7 @@ export default apiInitializer("0.8", (api) => {
                 console.log("category");
             });
             console.log(categoryList);
-            return (categoryList);
+            return categoryList;
         }
     });
 
