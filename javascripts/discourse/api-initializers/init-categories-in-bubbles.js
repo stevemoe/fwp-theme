@@ -11,8 +11,8 @@ export default apiInitializer("0.8", (api) => {
 
 
         html(attrs) {
-
-            return(attrs);
+console.log(attrs);
+            return("attrs");
         }
     });
 
