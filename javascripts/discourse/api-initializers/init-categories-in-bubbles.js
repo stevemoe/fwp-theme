@@ -17,7 +17,9 @@ export default apiInitializer("0.8", (api) => {
             ajax("/site.json").then(function (result) { // Get list of categories
                 result.categories.forEach(function (categories) {
                     categoryList.push(categories);
-                });
+                }).catch(e => {
+                    console.log(e);
+                });;
                 console.log("category1");
                 console.log(categoryList);
             });
