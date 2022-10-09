@@ -15,9 +15,7 @@ export default Component.extend({
     lockIcon: "lock",
 
     firstCategory() {
-        const container = Discourse.__container__;
-        const categoryList = container.lookup("controller:navigation/categories").site.categories;
-        return categoryList[0].name;
+        return Discourse.__container__.lookup("controller:navigation/categories").site.categories[0].name;
     },
 
     categoryList() {
