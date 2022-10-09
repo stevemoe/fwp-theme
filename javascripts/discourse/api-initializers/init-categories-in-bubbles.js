@@ -29,6 +29,7 @@ export default apiInitializer("0.8", (api) => {
             categoryList.forEach(function (category) {
                 console.log(category)
             });
+            console.log(this.get("categories"));
 
             return (category1);
         }
