@@ -10,6 +10,8 @@ export default apiInitializer("0.8", (api) => {
 
 
         html() {
+
+
             const ajax = require('discourse/lib/ajax').ajax;
             let categoryList =[];
             ajax("/site.json").then(function (result) { // Get list of categories
@@ -19,7 +21,8 @@ export default apiInitializer("0.8", (api) => {
                 console.log("category1");
                 console.log(categoryList);
             });
-            console.log("category2" + categoryList[1].name);
+            console.log("category2");
+            console.log(categoryList);
 
             let category1 = categoryList[0].name;
 
