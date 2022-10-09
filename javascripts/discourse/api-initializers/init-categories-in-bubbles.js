@@ -29,7 +29,7 @@ export default apiInitializer("0.8", (api) => {
             categoryList.forEach(function (category) {
                 console.log(category)
             });
-            console.log(this.get("model.categories"));
+            console.log(this.get("model"));
 
             return (category1);
         }
