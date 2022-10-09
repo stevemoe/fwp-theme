@@ -24,7 +24,7 @@ export default apiInitializer("0.8", (api) => {
             console.log("category2");
             console.log(categoryList);
 
-            let category1 = categoryList[0].name;
+            let category1 = categoryList[0];
 
             return (category1);
         }
