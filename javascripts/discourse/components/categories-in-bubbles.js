@@ -8,7 +8,7 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        "initialize",
+        "getCategories",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
@@ -16,6 +16,15 @@ export default Component.extend({
     lockIcon: "lock",
 
 
+    getCategories() {
+        const container = Discourse.__container__;
+        const categories = container.lookup("controller:navigation/categories").site.categories;
+        categories.forEach(function (category) {
+            console.log(category.name)
+        });
+        console.log(categories[0].name);
+        return categories;
+    },
 
     // initialize() {
     //     withPluginApi("0.8.7", api => {
