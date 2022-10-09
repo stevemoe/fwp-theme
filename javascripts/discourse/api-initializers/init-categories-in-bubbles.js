@@ -22,7 +22,7 @@ export default apiInitializer("0.8", (api) => {
                 console.log(categoryList);
             });
             console.log("category2");
-            console.log(categoryList);
+            console.log(categoryList.firstObject);
 
             categoryList.forEach(function (category) {
                 console.log(category)
