@@ -24,8 +24,9 @@ export default apiInitializer("0.8", (api) => {
             console.log("category2");
             console.log(categoryList);
 
-            let category1 = categoryList[0];
-            console.log(category1)
+            categoryList.forEach(function (category) {
+                console.log(category)
+            });
 
             return (category1);
         }
