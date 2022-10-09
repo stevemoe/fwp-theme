@@ -18,9 +18,11 @@ export default apiInitializer("0.8", (api) => {
                 });
                 console.log("category1" + categoryList[0].name);
             });
+            console.log("category2" + categoryList[1].name);
+
             let category1 = categoryList[0].name;
 
-            return category1;
+            return (category1);
         }
     });
 
