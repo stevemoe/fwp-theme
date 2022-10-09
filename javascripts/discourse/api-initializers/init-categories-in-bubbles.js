@@ -12,7 +12,7 @@ export default apiInitializer("0.8", (api) => {
         html() {
             const container = Discourse.__container__;
             const categories = container.lookup("controller:navigation/categories").site.categories;
-            console.log(categories);
+            console.log(categories[0]);
             return categories;
 
             // const ajax = require('discourse/lib/ajax').ajax;
