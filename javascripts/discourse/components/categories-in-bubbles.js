@@ -13,7 +13,11 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-
+    firstCategory() {
+        const container = Discourse.__container__;
+        const categoryList = container.lookup("controller:navigation/categories").site.categories;
+        return categoryList[0].name;
+    },
 
     categoryList() {
         const container = Discourse.__container__;
