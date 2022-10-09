@@ -3,12 +3,13 @@ import discourseComputed from "discourse-common/utils/decorators";
 import {equal} from "@ember/object/computed";
 import {isEmpty} from "@ember/utils";
 import {withPluginApi} from "discourse/lib/plugin-api";
+import {tracked} from '@ember/tracking';
 
 export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        "getCategories",
+        "categoryList",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
@@ -16,14 +17,11 @@ export default Component.extend({
     lockIcon: "lock",
 
 
-    getCategories() {
+
+    categoryList() {
         const container = Discourse.__container__;
-        const categories = container.lookup("controller:navigation/categories").site.categories;
-        categories.forEach(function (category) {
-            console.log(category.name)
-        });
-        console.log(categories[0].name);
-        return categories;
+        const categoryList = container.lookup("controller:navigation/categories").site.categories;
+        return categoryList;
     },
 
     // initialize() {
