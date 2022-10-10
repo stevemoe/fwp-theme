@@ -41,8 +41,7 @@
       }
     }
   }
-  .category-boxes,
-  .category-boxes-with-topics {
+  .category-bubbles {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -222,47 +221,6 @@
       }
     }
   }
-  .category-boxes-with-topics {
-    .category-box {
-      width: 31%;
-      margin: 0 1% 1.5em 1%;
-      padding: 0;
-    }
-    h3 {
-      font-size: $font-up-2;
-      text-align: center;
-      overflow: hidden;
-    }
-    .category-box-heading {
-      margin-bottom: 0.5em;
-      a[href] {
-        width: 100%;
-        color: var(--primary);
-      }
-    }
-    .featured-topics {
-      margin-bottom: 1em;
-      ul {
-        color: var(--primary-medium);
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      li {
-        padding: 4px 0;
-        display: flex;
-        align-items: baseline;
-        a {
-          @include line-clamp(2);
-        }
-        .d-icon {
-          margin-right: 0.15em;
-          width: 0.76em;
-          height: 0.76em;
-        }
-      }
-    }
-  }
   .categories-list .category {
     h3,
     h4 {
@@ -285,7 +243,7 @@
     }
   }
   .category-boxes-with-topics,
-  .category-boxes {
+  .category-bubbles {
     .category-box h3 .d-icon {
       margin-right: 0;
     }
