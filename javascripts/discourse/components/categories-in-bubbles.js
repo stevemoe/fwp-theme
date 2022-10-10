@@ -7,7 +7,6 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        "firstCategory",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
@@ -23,68 +22,14 @@ export default Component.extend({
         this.set('categories', categoryList);
     },
 
-    // firstCategory() {
-    //     const container = Discourse.__container__;
-    //     const categoryList = container.lookup("controller:navigation/categories").site.categories;
-    //     return Discourse.__container__.lookup("controller:navigation/categories").site.categories[0].name;
-    // },
-    //
-    // categoryList() {
-    //     const container = Discourse.__container__;
-    //     const categoryList = container.lookup("controller:navigation/categories").site.categories;
-    //     return categoryList;
-    // },
 
-    // initialize() {
-    //     withPluginApi("0.8.7", api => {
-    //         const ajax = require('discourse/lib/ajax').ajax;
-    //
-    //         api.registerConnectorClass('below-site-header', 'custom-homepage', {
-    //             setupComponent(args, component) {
-    //                 component.set('hostname', window.location.hostname);
-    //
-    //                 api.onPageChange((url, title) => {
-    //                     if (url == "/" || url == "/latest") {
-    //                         $('html').addClass('show-custom-homepage'); // Show homepage
-    //                         component.set('displayCustomHomepage', true);
-    //
-    //                         ajax("/site.json").then(function (result) { // Get list of categories
-    //                             let categoryName = [];
-    //                             result.categories.forEach(function (categories) {
-    //                                 categoryName.push(categories);
-    //                             });
-    //                             console.log(categoryName);
-    //                             component.set('categoryName', categoryName);
-    //                         });
-    //                     } else { // Hide homepage
-    //                         $('html').removeClass('show-custom-homepage');
-    //                         component.set('displayCustomHomepage', false);
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     });
-    //     return withPluginApi;
-    // },
+    anyLogos() {
+        return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
+    },
 
 
-    // @discourseComputed("categories.[].uploaded_background.url")
-    //
-    // getInlineSVG() {
-    //     $.get(this.categoryName.any((c) => !isEmpty(c.get("uploaded_background.url"))),function(data) {
-    //         console.log(data);
-    //     });
-    // },
-    //
-    //
-    // @discourseComputed("categories.[].uploaded_logo.url")
-    // anyLogos() {
-    //     return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
-    // },
-    //
-    // @discourseComputed("categories.[].subcategories")
-    // hasSubcategories() {
-    //     return this.categories.any((c) => !isEmpty(c.get("subcategories")));
-    // },
+    hasSubcategories() {
+        return this.categories.any((c) => !isEmpty(c.get("subcategories")));
+    },
 });
 
