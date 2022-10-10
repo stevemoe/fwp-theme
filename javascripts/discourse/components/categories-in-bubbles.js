@@ -7,22 +7,33 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        ":firstCategory",
+        "firstCategory",
         "anyLogos:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-    firstCategory() {
-        return Discourse.__container__.lookup("controller:navigation/categories").site.categories[0].name;
-    },
+    categories: null,
 
-    categoryList() {
+    init() {
         const container = Discourse.__container__;
         const categoryList = container.lookup("controller:navigation/categories").site.categories;
-        return categoryList;
+        this._super(...arguments);
+        this.set('categories', categoryList);
     },
+
+    // firstCategory() {
+    //     const container = Discourse.__container__;
+    //     const categoryList = container.lookup("controller:navigation/categories").site.categories;
+    //     return Discourse.__container__.lookup("controller:navigation/categories").site.categories[0].name;
+    // },
+    //
+    // categoryList() {
+    //     const container = Discourse.__container__;
+    //     const categoryList = container.lookup("controller:navigation/categories").site.categories;
+    //     return categoryList;
+    // },
 
     // initialize() {
     //     withPluginApi("0.8.7", api => {
