@@ -20,6 +20,7 @@ export default Component.extend({
         const categoryList = container.lookup("controller:navigation/categories").site.categories;
         this._super(...arguments);
         this.set('categories', categoryList);
+        console.log(this.categories);
     },
 
 
