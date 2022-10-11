@@ -38,8 +38,7 @@
             {{#if this.showTopics}}
                 <td class="latest">
                     {{#each this.category.featuredTopics as |t|}}
-                        {{t}}
-                        <FeaturedTopic @topic={{t}} />
+                        <FeaturedTopic @topic={{t}} @test="testString"/>
                     {{/each}}
                 </td>
             {{/if}}
