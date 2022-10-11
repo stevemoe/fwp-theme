@@ -25,7 +25,9 @@ export default Component.extend({
 
 
     anyLogos() {
+        console.log(this.categories);
         return this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url")));
+
     },
 
 
