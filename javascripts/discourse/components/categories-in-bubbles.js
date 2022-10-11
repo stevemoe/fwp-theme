@@ -18,7 +18,7 @@ export default Component.extend({
     init() {
         const container = Discourse.__container__;
         const categoryList = container.lookup("controller:navigation/categories").site.categories;
-        // this._super(...arguments);
+        this._super(...arguments);
         this.set('categories', categoryList);
         console.log(this.categories);
     },
