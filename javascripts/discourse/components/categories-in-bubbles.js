@@ -13,7 +13,7 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-    categories: null,
+    categorieys: null,
 
     init() {
         const container = Discourse.__container__;
