@@ -1,5 +1,5 @@
 {{raw "topic-status" topic=this.topic}}
-<p>{{this.topic}}</p>
+<p>{{this.topic.creator}}</p>
 <a href={{this.topic.lastUnreadUrl}} class="title">{{html-safe this.topic.fancyTitle}}</a>
 <TopicPostBadges @unreadPosts={{this.topic.unread_posts}} @unseen={{this.topic.unseen}} @url={{this.topic.lastUnreadUrl}} />
 
