@@ -13,13 +13,13 @@ export default Component.extend({
     noCategoryStyle: equal("siteSettings.category_style", "none"),
     lockIcon: "lock",
 
-    categorieys: null,
+    categories: null,
 
     init() {
         const container = Discourse.__container__;
         const categoryList = container.lookup("controller:navigation/categories").site.categories;
         this._super(...arguments);
-        this.set('categorieys', categoryList);
+        this.set('categories', categoryList);
         console.log(this.categories);
     },
 
