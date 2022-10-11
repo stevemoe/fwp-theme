@@ -7,7 +7,7 @@ export default Component.extend({
     tagName: "section",
     classNameBindings: [
         ":category-bubbles",
-        "anyLogos:with-logos:no-logos",
+        "anyLogo:with-logos:no-logos",
         "hasSubcategories:with-subcategories",
     ],
     noCategoryStyle: equal("siteSettings.category_style", "none"),
@@ -23,7 +23,7 @@ export default Component.extend({
     },
 
 
-    anyLogos() {
+    anyLogo() {
         console.log(this.categories.any((c) => !isEmpty(c.get("uploaded_logo.url"))));
         return this.categories.any((c) => isEmpty(c.get("uploaded_logo.url")));
 
